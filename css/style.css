@@ -679,20 +679,31 @@ body {
   left: 57%;
 }
 
-#theta-wrapper {
+.outer-theta {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  height: 300px;
-  background-color: #333;
+  padding-top: 68.3%;
+  position: relative;
+  background-color: #ccc;
   clear: both;
 }
 @media (min-width: 767px) {
-  #theta-wrapper {
+  .outer-theta {
     width: 83.05085%;
     float: left;
     margin-left: 8.47458%;
     margin-right: -100%;
+    padding-top: 56.7%;
   }
+}
+
+#theta-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
 }

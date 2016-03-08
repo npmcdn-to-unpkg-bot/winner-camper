@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
+    <title>360度展示</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -64,20 +64,37 @@
           <img src="img/ss6-2d.png" alt="平面配置圖">
           <a id="hotspot_1" class="hotspot"></a>
         </div>
-        <div id="theta-wrapper">
+        <div class="outer-theta">
+          <div id="theta-wrapper">
 
+          </div>
         </div>
+
       </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+
+
+    <script src="js/lib/async.js"></script>
+    <script src="js/lib/three.js"></script>
+    <script src="js/lib/OrbitControls.js"></script>
+    <script src="js/lib/theta-viewer.js"></script>
+
     <script>
       $(document).ready(function() {
         var toggle = $('.navbar-toggle.hamburger');
         toggle.on('click', function(e) {
           $(this).toggleClass('is-active');
         });
+        $('#hotspot_1').on('click', function(e) {
+          e.preventDefault();
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/1.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        })
       });
     </script>
 
