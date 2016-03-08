@@ -1,0 +1,22 @@
+{
+  "name": "winner-camper",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "psdmac <psdmac@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/psdmac/winner-camper",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "^2.7.0"
+  }
+}

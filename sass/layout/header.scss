@@ -1,0 +1,58 @@
+.navbar.navbar-default-weile {
+  height: 52px;
+  background-color: #fff;
+  @include breakpoint($pad) {
+    height: 80px;
+  }
+}
+
+.navbar-brand {
+  vertical-align: text-bottom;
+  padding: 5px;
+  display: inline-block;
+  img {
+    height: 42px;
+  }
+  @include breakpoint($pad) {
+    padding: 10px;
+    display: inline-block;
+    img {
+      height: 60px;
+    }
+  }
+}
+
+.main-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  @include breakpoint($pad) {
+    display: inline-block;
+  }
+  vertical-align: text-bottom;
+  li {
+    display: inline-block;
+    margin: 20px 10px;
+    a {
+      display: inline-block;
+      padding: 12px;
+      border-radius: 20px;
+      background-color: #f1f1f1;
+      text-decoration: none;
+      color: $color;
+    }
+  }
+}
+
+.navbar-toggle.hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include breakpoint($pad) {
+    display: none;
+  }
+}
+.hamburger {
+
+}

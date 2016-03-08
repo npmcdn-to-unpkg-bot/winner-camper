@@ -1,0 +1,31 @@
+$color: #323237;
+
+body {
+  background: #f1f1f1;
+  color: $color;
+}
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,      
+  column-width: false,
+  math: fluid,      
+  output: float,
+  gutter-position: after,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+
+.wrap {
+  @include container(1024px);
+  height: 500px;
+}
+
+$pad: 767px;
+
+
+
