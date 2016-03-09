@@ -64,12 +64,24 @@
           <img src="img/ss6-2d.png" alt="平面配置圖">
           <a id="hotspot_1" class="hotspot"></a>
         </div>
-        <div class="outer-theta">
+
+      </div>
+    </div>
+
+
+    <div id="lightbox" class="pageload-overlay">
+      <div class="spinner"></div>
+      <button type="button" class="lightbox-toggle hamburger hamburger--collapse is-active" data-target=".navbar-main">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="wrap">
+        <div id="outer-theta">
           <div id="theta-wrapper">
 
           </div>
         </div>
-
       </div>
     </div>
 
@@ -84,17 +96,22 @@
 
     <script>
       $(document).ready(function() {
-        var toggle = $('.navbar-toggle.hamburger');
+        var toggle = $('.lightbox-toggle.hamburger');
         toggle.on('click', function(e) {
-          $(this).toggleClass('is-active');
+          $('#lightbox').removeClass('show');
+          $('#theta-wrapper').html("");
         });
         $('#hotspot_1').on('click', function(e) {
           e.preventDefault();
+          
+          $('#lightbox').addClass('show');
           var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
           viewer.images = ["img/ss6-360/1.jpg"];
           viewer.autoRotate = true;
-          viewer.load();
-        })
+          viewer.load(function() {
+            console.log('finish...');
+          });
+        });
       });
     </script>
 

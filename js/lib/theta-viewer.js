@@ -21,7 +21,6 @@
       this.renderer.setSize(this.width, this.height);
       this.dom.appendChild(this.renderer.domElement);
       this.controls = new THREE.OrbitControls(this.camera);
-      // this.controls.noZoom = true;
       this.controls.maxDistance = 200;
       this.controls.addEventListener('change', (function(_this) {
         return function() {
