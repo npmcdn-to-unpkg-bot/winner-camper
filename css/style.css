@@ -681,8 +681,8 @@ body {
 
 #outer-theta {
   width: 100%;
-  padding-top: 68.3%;
-  top: 50px;
+  height: 100%;
+  top: 0;
   left: 0;
   margin-top: 0;
   margin-left: 0;
@@ -692,7 +692,7 @@ body {
 @media (min-width: 767px) {
   #outer-theta {
     width: 768px;
-    padding-top: 576px;
+    height: 576px;
     top: 50%;
     left: 50%;
     margin-left: -384px;
@@ -733,6 +733,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 #lightbox .hamburger-inner, #lightbox .hamburger-inner::before, #lightbox .hamburger-inner::after {
   background-color: #fff;
