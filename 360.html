@@ -96,6 +96,10 @@
 
     <script>
       $(document).ready(function() {
+        var nav = $('.navbar-toggle.hamburger');
+        nav.on('click', function(e) {
+          $(this).toggleClass('is-active');
+        });
         var toggle = $('.lightbox-toggle.hamburger');
         toggle.on('click', function(e) {
           $('#lightbox').removeClass('show');
