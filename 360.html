@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body>
+  <body class="cbp-spmenu-push">
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -29,7 +29,7 @@
               <img src="img/logo.png" class="brand" alt="Winner">
             </a>
 
-            <ul class="main-links">
+            <ul class="main-links cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
               <li>
                 <a href="index.html">
                   <span>唯樂露營車</span>
@@ -63,6 +63,9 @@
         <div class="internal-wrapper">
           <img src="img/ss6-2d.png" alt="平面配置圖">
           <a id="hotspot_1" class="hotspot"></a>
+          <a id="hotspot_2" class="hotspot"></a>
+          <a id="hotspot_3" class="hotspot"></a>
+          <a id="hotspot_4" class="hotspot"></a>
         </div>
 
       </div>
@@ -76,14 +79,14 @@
           <span class="hamburger-inner"></span>
         </span>
       </button>
-      <div class="wrap">
-        <div id="outer-theta">
-          <div id="theta-wrapper">
+      <div id="outer-theta">
+        <div id="theta-wrapper">
 
-          </div>
         </div>
       </div>
     </div>
+
+
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -96,10 +99,14 @@
 
     <script>
       $(document).ready(function() {
+
         var nav = $('.navbar-toggle.hamburger');
         nav.on('click', function(e) {
           $(this).toggleClass('is-active');
+          $('body').toggleClass('cbp-spmenu-push-toleft');
+          $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
         });
+
         var toggle = $('.lightbox-toggle.hamburger');
         toggle.on('click', function(e) {
           $('#lightbox').removeClass('show');
@@ -112,9 +119,35 @@
           var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
           viewer.images = ["img/ss6-360/1.jpg"];
           viewer.autoRotate = true;
-          viewer.load(function() {
-            console.log('finish...');
-          });
+          viewer.load();
+        });
+
+        $('#hotspot_2').on('click', function(e) {
+          e.preventDefault();
+          
+          $('#lightbox').addClass('show');
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/2.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        });      
+        $('#hotspot_3').on('click', function(e) {
+          e.preventDefault();
+          
+          $('#lightbox').addClass('show');
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/3.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        });   
+        $('#hotspot_4').on('click', function(e) {
+          e.preventDefault();
+          
+          $('#lightbox').addClass('show');
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/4.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
         });
       });
     </script>

@@ -1,0 +1,78 @@
+
+
+
+.cbp-spmenu {
+  background: #47a3da;
+  position: fixed;
+}
+
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+}
+
+.cbp-spmenu-vertical li {
+  display: block;
+  font-size: 1.5em;
+}
+
+
+.cbp-spmenu-right {
+  right: -240px;
+  &.cbp-spmenu-open {
+    right: 0px;
+  }
+}
+
+
+
+@include breakpoint($pad) {
+  .cbp-spmenu {
+    background: transparent;
+    position: static;
+  }
+
+  .cbp-spmenu-vertical li {
+    display: inline-block;
+    font-size: 1em;
+  }
+
+  .cbp-spmenu-vertical {
+    width: auto;
+    height: auto;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .cbp-spmenu-vertical a {
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .cbp-spmenu-right {
+    right: auto;
+  }
+}
+
+
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+
+.cbp-spmenu-push-toleft {
+  left: -240px;
+}
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

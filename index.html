@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body>
+  <body class="cbp-spmenu-push">
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -29,7 +29,7 @@
               <img src="img/logo.png" class="brand" alt="Winner">
             </a>
 
-            <ul class="main-links">
+            <ul class="main-links cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
               <li>
                 <a href="index.html">
                   <span>唯樂露營車</span>
@@ -65,6 +65,9 @@
         var toggle = $('.navbar-toggle.hamburger');
         toggle.on('click', function(e) {
           $(this).toggleClass('is-active');
+          $('body').toggleClass('cbp-spmenu-push-toleft');
+          $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
+          
         });
       });
     </script>
