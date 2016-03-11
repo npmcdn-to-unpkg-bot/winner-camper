@@ -5,6 +5,10 @@ body {
   color: $color;
 }
 
+html, body {
+  font-family: "Heiti TC", \5FAE\8EDF\6B63\9ED1\9AD4, \65B0\7D30\660E\9AD4, "Helvetica Neue", Helvetica, Arial, Serif, sans-serif;
+}
+
 $susy: (
   columns: 12,
   gutters: 1/4,      
@@ -22,7 +26,6 @@ $susy: (
 
 .wrap {
   @include container(1280px);
-  height: 500px;
 }
 
 button {
@@ -30,6 +33,7 @@ button {
 }
 
 $pad: 767px;
+$phone: 480px;
 
 
 
