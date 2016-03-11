@@ -2,7 +2,7 @@
 
 
 .cbp-spmenu {
-  background: #47a3da;
+  background: rgb(3,110,184);
   position: fixed;
 }
 
@@ -18,7 +18,9 @@
 
 .cbp-spmenu-vertical li {
   display: block;
-  font-size: 1.5em;
+  font-size: 1em;
+
+  text-align: center;
 }
 
 

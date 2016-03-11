@@ -1,7 +1,7 @@
 $color: #323237;
 
 body {
-  background: #f1f1f1;
+  background: #fff;
   color: $color;
 }
 
@@ -21,7 +21,7 @@ $susy: (
 );
 
 .wrap {
-  @include container(1024px);
+  @include container(1280px);
   height: 500px;
 }
 
@@ -30,6 +30,12 @@ button {
 }
 
 $pad: 767px;
+
+
+
+
+
+
 
 
 

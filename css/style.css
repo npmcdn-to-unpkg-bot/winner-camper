@@ -1,10 +1,10 @@
 body {
-  background: #f1f1f1;
+  background: #fff;
   color: #323237;
 }
 
 .wrap {
-  max-width: 1024px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   height: 500px;
@@ -19,13 +19,27 @@ button {
   outline: none;
 }
 
+#main-header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .navbar.navbar-default-weile {
   height: 52px;
-  background-color: #fff;
+  background-color: transparent;
 }
 @media (min-width: 767px) {
   .navbar.navbar-default-weile {
     height: 80px;
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar-header {
+    padding: 30px 0;
   }
 }
 
@@ -57,6 +71,21 @@ button {
   .main-links {
     display: inline-block;
   }
+  .main-links li {
+    position: relative;
+  }
+  .main-links li:before {
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: #323237;
+    position: absolute;
+    top: 11px;
+    right: -12px;
+  }
+  .main-links li:last-child:before {
+    background-color: transparent;
+  }
 }
 .main-links li {
   display: inline-block;
@@ -64,10 +93,16 @@ button {
 }
 .main-links li a {
   display: inline-block;
-  padding: 12px;
+  font-size: 20px;
+  padding: 7px;
   border-radius: 20px;
   text-decoration: none;
-  color: #323237;
+  color: #f1f1f1;
+}
+@media (min-width: 767px) {
+  .main-links li a {
+    color: #323237;
+  }
 }
 
 .navbar-toggle.hamburger {
@@ -81,8 +116,130 @@ button {
   }
 }
 
+/* Background images are set within the HTML using inline CSS, not here */
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+}
+.fill.responsive {
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  background-size: 100% auto;
+  -o-background-size: 100% auto;
+}
+@media (min-width: 767px) {
+  .fill.responsive {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+}
+
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+
+.carousel {
+  min-height: 500px;
+}
+
+.carousel-inner {
+  height: 100%;
+  min-height: 500px;
+}
+
+a.know-more {
+  display: block;
+  width: 199px;
+  height: 94px;
+  margin: 0 auto;
+}
+
+.carousel-inner .item:nth-child(n+2) .carousel-caption {
+  top: 5%;
+}
+.carousel-inner .item:nth-child(n+2) .carousel-caption h3 {
+  font-size: 16px;
+  font-weight: 300;
+}
+@media (min-width: 767px) {
+  .carousel-inner .item:nth-child(n+2) .carousel-caption {
+    top: 15%;
+    text-align: left;
+    left: 15%;
+  }
+  .carousel-inner .item:nth-child(n+2) .carousel-caption h2 {
+    font-size: 20px;
+  }
+  .carousel-inner .item:nth-child(n+2) .carousel-caption h3 {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.carousel-indicators {
+  /* 198 */
+}
+.carousel-indicators li.active {
+  background-color: #505050;
+  margin: 0 5px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+.carousel-indicators li {
+  background-color: #c6c5c5;
+  margin: 0 5px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  width: 12px;
+  height: 12px;
+}
+
 .cbp-spmenu {
-  background: #47a3da;
+  background: #036eb8;
   position: fixed;
 }
 
@@ -95,7 +252,8 @@ button {
 
 .cbp-spmenu-vertical li {
   display: block;
-  font-size: 1.5em;
+  font-size: 1em;
+  text-align: center;
 }
 
 .cbp-spmenu-right {
@@ -190,7 +348,7 @@ button {
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
   width: 30px;
   height: 3px;
-  background-color: #000;
+  background-color: #505050;
   border-radius: 4px;
   position: absolute;
   transition-property: transform;
