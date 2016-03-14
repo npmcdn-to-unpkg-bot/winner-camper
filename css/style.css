@@ -74,36 +74,36 @@ button {
   .main-links {
     display: inline-block;
   }
-  .main-links li {
+  .main-links > li {
     position: relative;
   }
-  .main-links li:before {
+  .main-links > li:before {
     content: "";
     width: 2px;
     height: 20px;
     background-color: #323237;
     position: absolute;
-    top: 11px;
+    top: 3px;
     right: -12px;
   }
-  .main-links li:last-child:before {
+  .main-links > li:last-child:before {
     background-color: transparent;
   }
 }
-.main-links li {
+.main-links > li {
   display: inline-block;
   margin: 20px 10px;
 }
-.main-links li a {
+.main-links > li a {
   display: inline-block;
   font-size: 20px;
-  padding: 7px;
+  padding: 0 14px 14px 14px;
   border-radius: 20px;
   text-decoration: none;
   color: #f1f1f1;
 }
 @media (min-width: 767px) {
-  .main-links li a {
+  .main-links > li a {
     color: #323237;
   }
 }
@@ -239,6 +239,28 @@ a.know-more {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
   width: 12px;
   height: 12px;
+}
+
+.first-level {
+  position: relative;
+}
+.first-level:hover .sec-level {
+  display: block;
+}
+.first-level:hover .sec-level:hover {
+  display: block;
+}
+
+.sec-level {
+  position: absolute;
+  display: none;
+  top: 30px;
+  width: 130px;
+  padding: 0;
+  background-color: #ccc;
+}
+.sec-level .list a {
+  font-size: 18px;
 }
 
 .cbp-spmenu {
@@ -549,6 +571,12 @@ a.know-more {
 #main-footer .copyright {
   padding: 20px 20px;
   text-align: center;
+}
+
+.announce {
+  max-width: 500px;
+  margin: 50px auto 0 auto;
+  padding: 0 20px;
 }
 
 /*!

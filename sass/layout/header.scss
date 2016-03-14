@@ -42,7 +42,7 @@
   list-style: none;
   @include breakpoint($pad) {
     display: inline-block;
-    li {
+    > li {
       position: relative;
       &:before {
         content: "";
@@ -50,7 +50,7 @@
         height: 20px;
         background-color: $color;
         position: absolute;
-        top: 11px;
+        top: 3px;
         right: -12px;
       }
       &:last-child {
@@ -61,13 +61,13 @@
     }
   }
   vertical-align: text-bottom;
-  li {
+  > li {
     display: inline-block;
     margin: 20px 10px;
     a {
       display: inline-block;
       font-size: 20px;
-      padding: 7px;
+      padding: 0 14px 14px 14px;
       border-radius: 20px;
       // background-color: #f1f1f1;
       text-decoration: none;
@@ -213,6 +213,32 @@ a.know-more {
     box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.75);
     width: 12px;
     height: 12px;
+  }
+}
+
+.first-level {
+  position: relative;
+  &:hover {
+    .sec-level {
+      display: block;
+      &:hover {
+        display: block
+      }
+    }
+  }
+}
+
+.sec-level {
+  position: absolute;
+  display: none;
+  top: 30px;
+  width: 130px;
+  padding: 0;
+  background-color: #ccc;
+  .list {
+    a {
+      font-size: 18px;
+    }
   }
 }
 
