@@ -94,17 +94,18 @@ button {
   display: inline-block;
   margin: 20px 10px;
 }
-.main-links > li a {
+.main-links > li > a {
   display: inline-block;
   font-size: 20px;
-  padding: 0 14px 14px 14px;
+  padding: 20px 0 10px 0;
   border-radius: 20px;
   text-decoration: none;
   color: #f1f1f1;
 }
 @media (min-width: 767px) {
-  .main-links > li a {
+  .main-links > li > a {
     color: #323237;
+    padding: 0 14px 30px 14px;
   }
 }
 
@@ -244,25 +245,72 @@ a.know-more {
 .first-level {
   position: relative;
 }
-.first-level:hover .sec-level {
-  display: block;
+.first-level:hover .dropdown {
+  opacity: 1;
 }
-.first-level:hover .sec-level:hover {
-  display: block;
-}
-
-.sec-level {
-  position: absolute;
-  display: none;
-  top: 30px;
-  width: 130px;
-  padding: 0;
-  background-color: #ccc;
-}
-.sec-level .list a {
-  font-size: 18px;
+.first-level:hover .dropdown:hover {
+  opacity: 1;
 }
 
+.dropdown {
+  padding-left: 0;
+}
+.dropdown a {
+  color: #f1f1f1;
+  opacity: 0.8;
+}
+
+@media (min-width: 767px) {
+  .dropdown {
+    position: absolute;
+    opacity: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.17);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    top: 50px;
+    width: 130px;
+    padding: 0;
+    padding: 10px 0;
+  }
+  .dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    margin-right: -6px;
+    border-width: 0 12px 12px 12px;
+    border-style: solid;
+    border-color: #fff transparent;
+  }
+  .dropdown:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+    margin-right: -7px;
+    border-width: 0 14px 14px 14px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1) transparent;
+  }
+  .dropdown .list {
+    padding: 10px 0;
+  }
+  .dropdown .list a {
+    font-size: 16px;
+    color: #8aa8bd;
+    text-decoration: none;
+  }
+}
 .cbp-spmenu {
   background: #036eb8;
   position: fixed;
