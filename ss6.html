@@ -25,7 +25,7 @@
     <meta property="og:description" content="唯樂露營車，露營車專賣、營區規劃、露營車出租">
     <meta property="og:image" content="img/home/slide1.jpg">
   </head>
-  <body class="cbp-spmenu-push">
+  <body class="cbp-spmenu-push" data-spy="scroll" data-target="#navbar-list" data-offset="0">
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -83,6 +83,54 @@
         </div>
       </div>
       <div class="wrap"></div>
+      <nav id="navbar-list" class="motorhomes-nav">
+        <ul class="nav">
+          <li>
+            <a href="#looking">
+              <span class="l-text">外 觀</span>
+              <br>
+              <span class="s-text">Looking</span>
+            </a>
+          </li>
+          <li>
+            <a href="#safety">
+              <span class="l-text">安 全</span>
+              <br>
+              <span class="s-text">Safety</span>
+            </a>
+          </li>
+          <li>
+            <a href="#equipment">
+              <span class="l-text">配 備</span>
+              <br>
+              <span class="s-text">Equipment</span>
+            </a>
+          </li>
+          <li>
+            <a href="#question">
+              <span class="l-text">問 題</span>
+              <br>
+              <span class="s-text">Question</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="looking">
+      <h1>外觀</h1>
+    </div>
+
+    <div id="safety">
+      <h1>安全</h1>
+    </div>
+
+    <div id="equipment">
+      <h1>配備</h1>
+    </div>
+
+    <div id="question">
+      <h1>問題</h1>
     </div>
 
     <div id="footer-sitemap">
@@ -148,6 +196,8 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/vendor/classie.js"></script>
+    <script src="js/vendor/cbpAnimatedHeader.js"></script>
     <script>
       $(document).ready(function() {
         $('.carousel').carousel();
@@ -156,7 +206,6 @@
           $(this).toggleClass('is-active');
           $('body').toggleClass('cbp-spmenu-push-toleft');
           $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
-
         });
       });
     </script>

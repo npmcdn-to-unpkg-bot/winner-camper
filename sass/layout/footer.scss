@@ -1,5 +1,6 @@
 
 #footer-sitemap {
+  @include span(12);
   background-color: #2E2E2F;
   padding: 30px 0;
   ul {
@@ -39,6 +40,7 @@
 }
 
 #main-footer {
+  @include span(12);
   background-color: #575758;
   padding-top: 40px;
   color: #b9bcbf;

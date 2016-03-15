@@ -43,3 +43,95 @@
     width: 100%;
   }
 }
+
+nav.motorhomes-nav {
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    li {
+      > a {
+        padding: 20px 0;
+      }
+      display: none;
+      @include breakpoint($pad) {
+        display: block
+      }
+      &.active {
+        display: block;
+      }
+    }
+  }
+  @include span(12);
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    @include span(12);
+    &:nth-child(n+2) {
+      display: none;
+    }
+    @include breakpoint($pad) {
+      &:nth-child(n+2) {
+        display: block;
+      }
+      @include span(3);
+      &:before {
+        content: "";
+        width: 14px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -14px;
+        background-image: url("../img/ss6/hr.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &:last-child {
+      @include breakpoint($pad) {
+        @include span(3 last);
+        &:before {
+          width: 0;
+        }       
+      }
+    }
+    > a {
+      display: inline-block;
+      padding: 30px 0;
+      width: 100%;
+      text-decoration: none;
+      .l-text {
+        font-size: 30px;
+      }
+      .s-text {
+        font-size: 18px;
+      }
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  background-color: #fff;
+}
+
+body {
+  position: relative;
+}
+
+#looking, #equipment {
+  @include span(12);
+  height: 800px;
+  background-color: #ccc;
+}
+
+
+#safety, #question {
+  @include span(12);
+  height: 800px;
+  background-color: #333;
+}
