@@ -16,7 +16,7 @@
 
 .navbar-header {
   @include breakpoint($pad) {
-    padding: 30px 0;
+    padding: 0;
   }
 }
 
@@ -31,14 +31,14 @@
     padding: 10px;
     display: inline-block;
     img {
-      height: 60px;
+      height: 80px;
     }
   }
 }
 
 .main-links {
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0 0;
   list-style: none;
   @include breakpoint($pad) {
     display: inline-block;
@@ -63,7 +63,7 @@
   vertical-align: text-bottom;
   > li {
     display: inline-block;
-    margin: 20px 10px;
+    margin: 20px 10px 0 0;
     > a {
       display: inline-block;
       font-size: 20px;

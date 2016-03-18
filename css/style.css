@@ -42,7 +42,7 @@ button {
 
 @media (min-width: 767px) {
   .navbar-header {
-    padding: 30px 0;
+    padding: 0;
   }
 }
 
@@ -60,13 +60,13 @@ button {
     display: inline-block;
   }
   .navbar-brand img {
-    height: 60px;
+    height: 80px;
   }
 }
 
 .main-links {
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0 0;
   list-style: none;
   vertical-align: text-bottom;
 }
@@ -92,7 +92,7 @@ button {
 }
 .main-links > li {
   display: inline-block;
-  margin: 20px 10px;
+  margin: 20px 10px 0 0;
 }
 .main-links > li > a {
   display: inline-block;
@@ -661,7 +661,7 @@ a.know-more {
 }
 @media (min-width: 767px) {
   #motorhomes-top {
-    margin-top: 120px;
+    margin-top: 100px;
   }
 }
 @media (min-width: 767px) {
@@ -947,6 +947,12 @@ body {
   left: 50%;
   margin-left: -150px;
 }
+@media (min-width: 767px) {
+  #camper-color .color-container {
+    width: 400px;
+    margin-left: -200px;
+  }
+}
 #camper-color .color-container img {
   width: 100%;
 }
@@ -1058,7 +1064,7 @@ body {
   width: 100%;
 }
 #camper-color .sidebar .paint-wrap .paint:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 #camper-color .sidebar .coating-wrap {
   overflow: hidden;
@@ -1079,7 +1085,7 @@ body {
   width: 100%;
 }
 #camper-color .sidebar .coating-wrap .coating:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 #camper-color .sidebar .stylish-wrap {
   overflow: hidden;
@@ -1099,7 +1105,7 @@ body {
   width: 100%;
 }
 #camper-color .sidebar .stylish-wrap .stylish:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 #safety, #question {
