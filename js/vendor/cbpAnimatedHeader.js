@@ -12,6 +12,7 @@ var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.motorhomes-nav' ),
+		fake = document.querySelector( '.fake' ),
 		didScroll = false,
 		changeHeaderOn = 1000;
 
@@ -28,9 +29,11 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'fixed' );
+			classie.add( fake, 'fixed' );
 		}
 		else {
 			classie.remove( header, 'fixed' );
+			classie.remove( fake, 'fixed' );
 		}
 		didScroll = false;
 	}

@@ -704,6 +704,18 @@ a.know-more {
   width: 100%;
 }
 
+.fake {
+  height: 0;
+}
+.fake.fixed {
+  height: 127px;
+}
+@media (min-width: 767px) {
+  .fake.fixed {
+    height: 127px;
+  }
+}
+
 nav.motorhomes-nav {
   width: 100%;
   float: left;
@@ -713,6 +725,7 @@ nav.motorhomes-nav {
 }
 nav.motorhomes-nav.fixed {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
 }
@@ -797,13 +810,296 @@ body {
   position: relative;
 }
 
-#looking, #equipment {
+#looking, #equipment, #camper-color {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  height: 800px;
   background-color: #ccc;
+}
+
+#looking {
+  position: relative;
+}
+#looking .bg-container {
+  min-height: 1000px;
+  background-image: url("../img/ss6/looking-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 767px) {
+  #looking .bg-container {
+    min-height: 800px;
+  }
+}
+#looking #looking-camper {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -300px;
+  width: 600px;
+  display: block;
+}
+#looking #looking-camper img {
+  width: 100%;
+}
+@media (min-width: 767px) {
+  #looking #looking-camper {
+    display: none;
+  }
+}
+#looking #looking-camper-mini {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  margin-left: -300px;
+  width: 830px;
+  display: none;
+}
+#looking #looking-camper-mini img {
+  width: 100%;
+}
+@media (min-width: 767px) {
+  #looking #looking-camper-mini {
+    display: block;
+  }
+}
+#looking #smart-control {
+  position: absolute;
+  top: 80px;
+  right: 50%;
+  margin-right: -200px;
+}
+@media (min-width: 767px) {
+  #looking #smart-control {
+    top: 80px;
+    right: 80px;
+    margin-right: 0px;
+  }
+}
+#looking #smart-control img {
+  width: 400px;
+}
+#looking #smart-control-phone {
+  display: none;
+  position: absolute;
+  width: 400px;
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 767px) {
+  #looking #smart-control-phone {
+    display: block;
+  }
+}
+#looking #smart-control-phone img {
+  width: 100%;
+}
+#looking #looking-solgan {
+  padding: 10px 25px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  width: 90%;
+  top: 40%;
+  left: 5%;
+}
+#looking #looking-solgan h2 {
+  font-size: 18px;
+}
+#looking #looking-solgan h3 {
+  font-size: 12px;
+}
+@media (min-width: 767px) {
+  #looking #looking-solgan {
+    padding: 20px 50px;
+    top: 0;
+    left: 50px;
+  }
+  #looking #looking-solgan h2 {
+    font-size: 24px;
+  }
+  #looking #looking-solgan h3 {
+    font-size: 18px;
+  }
+}
+
+#camper-color {
+  position: relative;
+}
+#camper-color .bg-container {
+  position: relative;
+  min-height: 600px;
+  margin-right: 0;
+  background-image: url("../img/ss6/color-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 767px) {
+  #camper-color .bg-container {
+    min-height: 700px;
+    margin-right: 320px;
+  }
+}
+#camper-color .color-container {
+  position: absolute;
+  width: 300px;
+  top: 40%;
+  left: 50%;
+  margin-left: -150px;
+}
+#camper-color .color-container img {
+  width: 100%;
+}
+#camper-color .size-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+@media (min-width: 767px) {
+  #camper-color .size-container {
+    margin-right: 320px;
+  }
+}
+#camper-color .size-container ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#camper-color .size-container li {
+  list-style: none;
+  padding: 10px 10px;
+  display: block;
+  position: relative;
+}
+@media (min-width: 767px) {
+  #camper-color .size-container li {
+    display: inline-block;
+  }
+}
+#camper-color .size-container li:last-child:before {
+  width: 0;
+}
+#camper-color .size-container li:before {
+  content: "";
+  width: 2px;
+  height: 50%;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  background-color: #000;
+}
+#camper-color .sidebar {
+  position: static;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+}
+@media (min-width: 767px) {
+  #camper-color .sidebar {
+    position: absolute;
+    width: 320px;
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+#camper-color .sidebar ul {
+  padding: 0;
+  margin: 0;
+}
+#camper-color .sidebar li {
+  padding: 20px;
+  list-style: none;
+  position: relative;
+}
+#camper-color .sidebar li:before {
+  content: "";
+  width: 250px;
+  height: 25px;
+  background-image: url("../img/ss6/color/hr.png");
+  background-size: cover;
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  margin-left: -125px;
+}
+#camper-color .sidebar li:last-child:before {
+  height: 0;
+}
+#camper-color .sidebar h2 {
+  margin: 0;
+  font-size: 24px;
+}
+#camper-color .sidebar h3 {
+  margin: 5px 0;
+  font-size: 12px;
+}
+#camper-color .sidebar .paint-wrap {
+  overflow: hidden;
+}
+#camper-color .sidebar .paint-wrap .paint {
+  display: inline-block;
+  float: left;
+  width: 55px;
+  height: 55px;
+  padding: 3px;
+  opacity: 1;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#camper-color .sidebar .paint-wrap .paint img {
+  width: 100%;
+}
+#camper-color .sidebar .paint-wrap .paint:hover {
+  opacity: 0.8;
+}
+#camper-color .sidebar .coating-wrap {
+  overflow: hidden;
+}
+#camper-color .sidebar .coating-wrap .coating {
+  display: inline-block;
+  float: left;
+  width: 70px;
+  height: 70px;
+  padding: 3px;
+  opacity: 1;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#camper-color .sidebar .coating-wrap .coating img {
+  width: 100%;
+}
+#camper-color .sidebar .coating-wrap .coating:hover {
+  opacity: 0.8;
+}
+#camper-color .sidebar .stylish-wrap {
+  overflow: hidden;
+}
+#camper-color .sidebar .stylish-wrap .stylish {
+  display: inline-block;
+  float: left;
+  width: 140px;
+  padding: 15px 15px 6px 6px;
+  opacity: 1;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#camper-color .sidebar .stylish-wrap .stylish img {
+  width: 100%;
+}
+#camper-color .sidebar .stylish-wrap .stylish:hover {
+  opacity: 0.8;
 }
 
 #safety, #question {

@@ -44,9 +44,20 @@
   }
 }
 
+.fake {
+  height: 0;
+  &.fixed {
+    height: 127px;
+    @include breakpoint($pad) {
+      height: 127px;
+    }
+  }
+}
+
 nav.motorhomes-nav {
   &.fixed {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     li {
@@ -123,10 +134,267 @@ body {
   position: relative;
 }
 
-#looking, #equipment {
+#looking, #equipment, #camper-color {
   @include span(12);
-  height: 800px;
   background-color: #ccc;
+}
+
+#looking {
+  .bg-container {
+    min-height: 1000px;
+    @include breakpoint($pad) {
+      min-height: 800px;
+    }
+    background-image: url('../img/ss6/looking-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  position: relative;
+  #looking-camper {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    img {
+      width: 100%;
+    }
+    display: block;
+    @include breakpoint($pad) {
+      display: none;
+    }
+  }
+  #looking-camper-mini {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    margin-left: -300px;
+    width: 830px;
+    img {
+      width: 100%;
+    }
+    display: none;
+    @include breakpoint($pad) {
+      display: block;
+    }
+  }
+  #smart-control {
+    position: absolute;
+    top: 80px;
+    right: 50%;
+    margin-right: -200px;
+    @include breakpoint($pad) {
+      top: 80px;
+      right: 80px; 
+      margin-right: 0px;
+    }
+
+    img {
+      width: 400px;
+    }
+  }
+  #smart-control-phone {
+    display: none;
+    @include breakpoint($pad) {
+      display: block;
+    }
+    position: absolute;
+    width: 400px;
+    bottom: 0;
+    left: 0;
+    img {
+      width: 100%;
+    }
+  }
+  #looking-solgan {
+    padding: 10px 25px;
+    background-color: rgba(255,255,255,0.3);
+    position: absolute;
+    width: 90%;
+    top: 40%;
+    left: 5%;
+    h2 {
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+    @include breakpoint($pad) {
+      padding: 20px 50px;
+      top: 0;
+      left: 50px;
+      h2 {
+      font-size: 24px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+    
+  }
+}
+
+#camper-color {
+  position: relative;
+  .bg-container {
+    position: relative;
+    min-height: 600px;
+    margin-right: 0;
+    @include breakpoint($pad) {
+      min-height: 700px;
+      margin-right: 320px;
+    }
+    background-image: url('../img/ss6/color-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .color-container {
+    position: absolute;
+    width: 300px;
+    top: 40%;
+    left: 50%;
+    margin-left: -150px;
+    img {
+      width: 100%;
+    }
+  }
+  .size-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-right: 0;
+    @include breakpoint($pad) {
+      margin-right: 320px; 
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    li {
+      list-style: none;
+      padding: 10px 10px;
+      display: block;
+      @include breakpoint($pad) {
+        display: inline-block;
+      }
+      position: relative;
+      &:last-child {
+        &:before {
+          width: 0;
+        }
+      }
+      &:before {
+        content: "";
+        width: 2px;
+        height: 50%;
+        position: absolute;
+        top: 10px;
+        right: -5px;
+        background-color: #000;
+      }
+    }
+    background-color: rgba(255,255,255,0.7);
+  }
+  .sidebar {
+    position: static;
+    @include span(12);
+    background-color: #fff;
+    @include breakpoint($pad) {
+      position: absolute;
+      width: 320px;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      padding: 20px;
+      list-style: none;
+      position: relative;
+      &:before {
+        content: "";
+        width: 250px;
+        height: 25px;
+        background-image: url('../img/ss6/color/hr.png');
+        background-size: cover;
+        position: absolute;
+        bottom: -13px;
+        left: 50%;
+        margin-left: -125px;
+      }
+      &:last-child {
+        &:before {
+          height: 0;
+        }
+      }
+    }
+    h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    h3 {
+      margin: 5px 0;
+      font-size: 12px;
+    }
+    .paint-wrap {
+      overflow: hidden;
+      .paint {
+        display: inline-block;
+        float: left;
+        width: 55px;
+        height: 55px;
+        padding: 3px;
+        opacity: 1;
+        @include transition(0.3s);
+        img {
+          width: 100%;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .coating-wrap {
+      overflow: hidden;
+      .coating {
+        display: inline-block;
+        float: left;
+        width: 70px;
+        height: 70px;
+        padding: 3px;
+        opacity: 1;
+        @include transition(0.3s);
+        img {
+          width: 100%;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .stylish-wrap {
+      overflow: hidden;
+      .stylish {
+        display: inline-block;
+        float: left;
+        width: 140px;
+        padding: 15px 15px 6px 6px;
+        opacity: 1;
+        @include transition(0.3s);
+        img {
+          width: 100%;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 }
 
 
@@ -135,3 +403,4 @@ body {
   height: 800px;
   background-color: #333;
 }
+
