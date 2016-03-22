@@ -109,9 +109,9 @@
           </li>
           <li>
             <a href="#question">
-              <span class="l-text">問 題</span>
+              <span class="l-text">優 勢</span>
               <br>
-              <span class="s-text">Question</span>
+              <span class="s-text">Advantage</span>
             </a>
           </li>
         </ul>
@@ -266,7 +266,35 @@
     </div>
 
     <div id="equipment">
-      <h1>配備</h1>
+      <div class="bg-container"></div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a class="equipment-link active" href="#" data-id="#equip1">
+              <span class="l-text">外觀配備</span>
+              <br>
+              <span class="s-text">External features</span>
+              <br>
+              <img class="camper" src="img/ss6/equipment/external.png" alt="外觀配備">
+            </a>
+          </li>
+          <li>
+            <a class="equipment-link" href="#" data-id="#equip2">
+              <span class="l-text">內裝配備</span>
+              <br>
+              <span class="s-text">With internal</span>
+              <br>
+              <img class="tv" src="img/ss6/equipment/internal.png" alt="內裝配備">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="equipment-wrapper active" id="equip1">
+        <img src="img/ss6/equipment/external-bg.jpg" alt="">
+      </div>
+      <div class="equipment-wrapper" id="equip2">
+        <img src="img/ss6/equipment/internal-bg.jpg" alt="">
+      </div>
     </div>
 
     <div id="question">
@@ -348,6 +376,18 @@
           $('body').toggleClass('cbp-spmenu-push-toleft');
           $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
         });
+
+        var equipments = $('.equipment-wrapper');
+        var link = $('.equipment-link');
+        link.on('click', function(e) {
+          e.preventDefault();
+          link.removeClass('active');
+          $(this).addClass('active');
+          var target = $(this).data('id');
+          console.log(target);
+          equipments.removeClass('active');
+          $(target).addClass('active');
+        })
       });
     </script>
 

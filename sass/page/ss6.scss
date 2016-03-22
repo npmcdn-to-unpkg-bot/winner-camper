@@ -451,9 +451,100 @@ body {
   }
 }
 
+#equipment {
+  .bg-container {
+    height: 350px;
+    background-color: #ccc;
+    background-image: url('../img/ss6/equipment/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .menu {
+    overflow: hidden;
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      width: 100%;
+      float: left;
+      list-style: none;
+      position: relative;
+      @include breakpoint($pad) {
+        width: 50%;
+        height: 234px;
+        &:before {
+          content: "";
+          width: 2px;
+          height: 80%;
+          position: absolute;
+          top: 10%;
+          right: -1px;
+          z-index: 1;
+          background-color: #B1E3EA;
+        }
+        &:last-child {
+          &:before {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    li > a {
+      background-color: #39AFC2;
+      display: block;
+      text-align: center;
+      color: #f1f1f1;
+      padding: 20px 0;
+      text-decoration: none;
+      height: 100%;
+      img.camper {
+        width: 100px;
+        margin-top: 10px;
+        display: none;
+      }
+      img.tv {
+        width: 50px;
+        margin-top: 10px;
+        display: none;
+      }
+      @include breakpoint($pad) {
+        img.camper {
+          width: 240px;
+          margin-top: 10px;
+          display: inline-block;
+        }
+        img.tv {
+          width: 100px;
+          margin-top: 10px;
+          display: inline-block;
+        }
+      }
+      &:hover, &.active {
+        background-color: lighten(#39AFC2, 10%);
+      }
+    }
+    .l-text {
+      font-size: 28px;
+    }
+    .s-text {
+      font-size: 14px;
+    }
+  }
+  .equipment-wrapper {
+    display: none;
+    &.active {
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
 #safety, #question {
   @include span(12);
-  height: 800px;
   background-color: #333;
 }
 
