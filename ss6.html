@@ -87,28 +87,28 @@
       <nav id="navbar-list" class="motorhomes-nav">
         <ul class="nav">
           <li>
-            <a href="#looking">
+            <a class="scroll-link" href="#looking">
               <span class="l-text">外 觀</span>
               <br>
               <span class="s-text">Looking</span>
             </a>
           </li>
           <li>
-            <a href="#safety">
+            <a class="scroll-link" href="#safety">
               <span class="l-text">安 全</span>
               <br>
               <span class="s-text">Safety</span>
             </a>
           </li>
           <li>
-            <a href="#equipment">
+            <a class="scroll-link" href="#equipment">
               <span class="l-text">配 備</span>
               <br>
               <span class="s-text">Equipment</span>
             </a>
           </li>
           <li>
-            <a href="#question">
+            <a class="scroll-link" href="#question">
               <span class="l-text">優 勢</span>
               <br>
               <span class="s-text">Advantage</span>
@@ -388,6 +388,14 @@
           equipments.removeClass('active');
           $(target).addClass('active');
         })
+
+        $('a.scroll-link').on('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - 90
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
       });
     </script>
 
