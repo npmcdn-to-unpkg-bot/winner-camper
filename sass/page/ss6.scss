@@ -234,8 +234,18 @@ body {
   }
 }
 
+
+.title-wrapper {
+  padding: 10px;
+  color: #f1f1f1;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 20px;
+  clear: both;
+}
+
 #camper-color {
   position: relative;
+
   .bg-container {
     position: relative;
     min-height: 600px;
