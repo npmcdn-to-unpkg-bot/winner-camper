@@ -402,6 +402,44 @@ body {
   }
 }
 
+#safety {
+  .bg-container {
+    background-image: url('../img/ss6/safety/bg-safety.jpg');
+    background-size: cover;
+    padding-top: 70%;
+    @include breakpoint($pad) {
+      padding-top: 58%;
+    }
+    position: relative;
+    #safety-logo {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      width: 80px;
+      margin-left: -40px;
+      @include breakpoint($pad) {
+        width: 120px;
+        margin-left: -60px;    
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+    #safety-camper {
+      position: absolute;
+      width: 70%;
+      top: 90px;
+      @include breakpoint($pad) {
+        top: 150px;
+      }
+      left: 15%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
 
 #safety, #question {
   @include span(12);

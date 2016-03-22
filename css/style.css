@@ -1108,6 +1108,48 @@ body {
   opacity: 0.6;
 }
 
+#safety .bg-container {
+  background-image: url("../img/ss6/safety/bg-safety.jpg");
+  background-size: cover;
+  padding-top: 70%;
+  position: relative;
+}
+@media (min-width: 767px) {
+  #safety .bg-container {
+    padding-top: 58%;
+  }
+}
+#safety .bg-container #safety-logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 80px;
+  margin-left: -40px;
+}
+@media (min-width: 767px) {
+  #safety .bg-container #safety-logo {
+    width: 120px;
+    margin-left: -60px;
+  }
+}
+#safety .bg-container #safety-logo img {
+  width: 100%;
+}
+#safety .bg-container #safety-camper {
+  position: absolute;
+  width: 70%;
+  top: 90px;
+  left: 15%;
+}
+@media (min-width: 767px) {
+  #safety .bg-container #safety-camper {
+    top: 150px;
+  }
+}
+#safety .bg-container #safety-camper img {
+  width: 100%;
+}
+
 #safety, #question {
   width: 100%;
   float: left;
