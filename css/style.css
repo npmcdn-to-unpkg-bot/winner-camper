@@ -1293,7 +1293,17 @@ body {
 }
 #equipment .grid-item {
   width: 300px;
+  height: 271px;
   position: relative;
+}
+#equipment .grid-item:first-child {
+  height: 502px;
+}
+#equipment .grid-item:nth-child(4) {
+  height: 222px;
+}
+#equipment .grid-item:nth-child(5) {
+  height: 502px;
 }
 #equipment .grid-item .title {
   display: inline-block;
