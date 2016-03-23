@@ -43,7 +43,7 @@
             <ul class="main-links cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
               <li class="first-level">
                 <a href="index.html">
-                  <span>車型介紹</span>
+                  <span>定點式</span>
                 </a>
                 <ul class="dropdown">
                   <li class="list">
@@ -87,31 +87,31 @@
       <nav id="navbar-list" class="motorhomes-nav">
         <ul class="nav">
           <li>
-            <a href="#looking">
+            <a class="scroll-link" href="#looking">
               <span class="l-text">外 觀</span>
               <br>
               <span class="s-text">Looking</span>
             </a>
           </li>
           <li>
-            <a href="#safety">
+            <a class="scroll-link" href="#safety">
               <span class="l-text">安 全</span>
               <br>
               <span class="s-text">Safety</span>
             </a>
           </li>
           <li>
-            <a href="#equipment">
+            <a class="scroll-link" href="#equipment">
               <span class="l-text">配 備</span>
               <br>
               <span class="s-text">Equipment</span>
             </a>
           </li>
           <li>
-            <a href="#question">
-              <span class="l-text">問 題</span>
+            <a class="scroll-link" href="#question">
+              <span class="l-text">優 勢</span>
               <br>
-              <span class="s-text">Question</span>
+              <span class="s-text">Advantage</span>
             </a>
           </li>
         </ul>
@@ -266,7 +266,64 @@
     </div>
 
     <div id="equipment">
-      <h1>配備</h1>
+      <div class="bg-container"></div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a class="equipment-link active" href="#" data-id="#equip1">
+              <span class="l-text">外觀配備</span>
+              <br>
+              <span class="s-text">External features</span>
+              <br>
+              <img class="camper" src="img/ss6/equipment/external.png" alt="外觀配備">
+            </a>
+          </li>
+          <li>
+            <a class="equipment-link" href="#" data-id="#equip2">
+              <span class="l-text">內裝配備</span>
+              <br>
+              <span class="s-text">With internal</span>
+              <br>
+              <img class="tv" src="img/ss6/equipment/internal.png" alt="內裝配備">
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="equipment-wrapper active" id="equip1">
+        <div class="equip-lists grid">
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e1.jpg" alt="">
+            <span class="title">車 門</span>
+          </li>
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e2.jpg" alt="">
+            <span class="title">戶外攝影機</span>
+          </li>
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e3.jpg" alt="">
+            <span class="title">門 燈</span>
+          </li>
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e4.jpg" alt="">
+            <span class="title">抽換黑水箱</span>
+          </li>
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e5.jpg" alt="">
+            <span class="title">紗門</span>
+          </li>
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e6.jpg" alt="">
+            <span class="title">側窗</span>
+          </li>
+          <li class="grid-item">
+            <img src="img/ss6/equipment/e7.jpg" alt="">
+            <span class="title">側窗</span>
+          </li>
+        </div>
+      </div>
+      <div class="equipment-wrapper" id="equip2">
+        <img src="img/ss6/equipment/internal-bg.jpg" alt="">
+      </div>
     </div>
 
     <div id="question">
@@ -339,6 +396,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/vendor/classie.js"></script>
     <script src="js/vendor/cbpAnimatedHeader.js"></script>
+    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
     <script>
       $(document).ready(function() {
         $('.carousel').carousel();
@@ -347,6 +405,33 @@
           $(this).toggleClass('is-active');
           $('body').toggleClass('cbp-spmenu-push-toleft');
           $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
+        });
+
+        var equipments = $('.equipment-wrapper');
+        var link = $('.equipment-link');
+        link.on('click', function(e) {
+          e.preventDefault();
+          link.removeClass('active');
+          $(this).addClass('active');
+          var target = $(this).data('id');
+          console.log(target);
+          equipments.removeClass('active');
+          $(target).addClass('active');
+        })
+
+        $('a.scroll-link').on('click', function(e) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 90
+          }, 1500, 'easeInOutExpo');
+          e.preventDefault();
+        });
+
+
+        $('.grid').masonry({
+          // options
+          itemSelector: '.grid-item',
+          columnWidth: 300
         });
       });
     </script>
