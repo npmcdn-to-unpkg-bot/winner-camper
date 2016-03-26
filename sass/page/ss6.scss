@@ -627,10 +627,10 @@ body {
     @include span(12);
     .model {
       @include span(12);
-      padding: 20px;
+      padding: 5px 60px;
     }
     .person {
-      padding: 20px;
+      padding: 5px 60px;
       @include span(12);
     }
     @include breakpoint($pad) {
@@ -646,10 +646,42 @@ body {
 
   }
   .inter-equip-wrapper {
-    background-color: #ccc;
+    background-color: rgba(#8A8B8C, 0.6);
+    button {
+      color: #444546;
+      border: 0;
+      background-color: transparent;
+    }
+    @include span(12);
     ul {
       padding: 0;
       margin: 0;
+    }
+    li {
+      display: inline-block;
+      text-align: center;
+      button {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        @include breakpoint($pad) {
+          padding: 20px;
+          font-size: 20px;
+        }
+        text-decoration: none;
+        &:hover {
+          background-color: #444546;
+          color: #ccc;
+        }
+      }
+      @include span(12);
+      @include breakpoint($pad) {
+        @include span(3);
+        &:last-child {
+          @include span(3 last);
+        }
+      }
     }
   }
 }
@@ -659,3 +691,45 @@ body {
   background-color: #333;
 }
 
+.md-modal {
+  width: 80%;
+  max-width: 630px;
+  min-width: 320px;
+  height: 80%;
+}
+
+.md-content {
+  height: 100%;
+}
+
+  .ring {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+    z-index: 1;
+  }
+
+button.md-close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2001;
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: #fff;
+  }
+}
+
+#theta-wrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+.md-content > div {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.15em;
+}

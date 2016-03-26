@@ -335,10 +335,10 @@
         </div>
         <div class="inter-equip-wrapper">
           <ul>
-            <li><a href="">生活空間</a></li>
-            <li><a href="">廚房配備</a></li>
-            <li><a href="">衛浴空間</a></li>
-            <li><a href="">電子配置</a></li>
+            <li><button class="md-trigger ss6-spot1" data-modal="modal-1">生活空間</button></li>
+            <li><button class="md-trigger ss6-spot2" data-modal="modal-1">廚房配備</button></li>
+            <li><button class="md-trigger ss6-spot3" data-modal="modal-1">衛浴空間</button></li>
+            <li><button class="md-trigger ss6-spot4" data-modal="modal-1">電子配置</button></li>
           </ul>
         </div>
       </div>
@@ -408,6 +408,25 @@
       </div>
     </footer>
 
+
+    <div class="md-modal md-effect-3" id="modal-1">
+      <!-- <img class="ring" src="img/ring.gif" alt="spinner"> -->
+      <div class="md-content">  
+        <div id="theta-wrapper">          
+          
+        </div>
+      </div>
+      <button type="button" class="md-close hamburger hamburger--collapse is-active">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+
+
+    <div class="md-overlay"></div><!-- the overlay element -->
+
+
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -415,7 +434,12 @@
     <script src="js/vendor/classie.js"></script>
     <script src="js/vendor/cbpAnimatedHeader.js"></script>
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    <script src="js/vendor/modalEffects.js"></script>
+    
+
+
     <script>
+      var polyfilter_scriptpath = '/js/';
       $(document).ready(function() {
         $('.carousel').carousel();
         var toggle = $('.navbar-toggle.hamburger');
@@ -451,8 +475,42 @@
           itemSelector: '.grid-item',
           columnWidth: 300
         });
+
+
+
+        $('.ss6-spot1').on('click', function(e) {
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/1.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        });
+
+        $('.ss6-spot2').on('click', function(e) {
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/2.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        });      
+        $('.ss6-spot3').on('click', function(e) {
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/3.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        });   
+        $('.ss6-spot4').on('click', function(e) {
+          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
+          viewer.images = ["img/ss6-360/4.jpg"];
+          viewer.autoRotate = true;
+          viewer.load();
+        });
       });
     </script>
+
+    <script src="js/vendor/cssParser.js"></script>
+    <script src="js/lib/async.js"></script>
+    <script src="js/lib/three.js"></script>
+    <script src="js/lib/OrbitControls.js"></script>
+    <script src="js/lib/theta-viewer.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
