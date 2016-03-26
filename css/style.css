@@ -1193,13 +1193,15 @@ body {
   }
   #equipment .menu li:before {
     content: "";
-    width: 2px;
+    width: 24px;
     height: 80%;
     position: absolute;
     top: 10%;
-    right: -1px;
+    right: -12px;
     z-index: 1;
-    background-color: #B1E3EA;
+    background-image: url("../img/ss6/equipment/hr.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   #equipment .menu li:last-child:before {
     background-color: transparent;
@@ -1261,10 +1263,30 @@ body {
 #equipment .equipment-wrapper.active {
   display: block;
 }
-#equipment #equip1 {
+#equipment #equip1, #equipment #equip2 {
   background-image: url("../img/ss6/equipment/external-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+#equipment #equip2 {
+  overflow: hidden;
+}
+#equipment #equip2 .map-wrapper {
+  padding-top: 40%;
+  position: relative;
+}
+#equipment #equip2 .map {
+  position: absolute;
+  width: 90%;
+  top: 5%;
+  left: 5%;
+}
+@media (min-width: 767px) {
+  #equipment #equip2 .map {
+    width: 80%;
+    top: 10%;
+    left: 10%;
+  }
 }
 #equipment .equip-lists {
   list-style: none;
@@ -1312,8 +1334,49 @@ body {
   color: #f1f1f1;
   font-size: 18px;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  left: 10px;
+  bottom: 10px;
+}
+#equipment .model-person {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+#equipment .model-person .model {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px;
+}
+#equipment .model-person .person {
+  padding: 20px;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 767px) {
+  #equipment .model-person .model {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    padding: 30px;
+  }
+  #equipment .model-person .person {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+    padding: 30px;
+  }
+}
+#equipment .inter-equip-wrapper {
+  background-color: #ccc;
+}
+#equipment .inter-equip-wrapper ul {
+  padding: 0;
+  margin: 0;
 }
 
 #safety, #question {

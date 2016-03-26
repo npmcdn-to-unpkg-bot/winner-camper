@@ -481,13 +481,15 @@ body {
         height: 190px;
         &:before {
           content: "";
-          width: 2px;
+          width: 24px;
           height: 80%;
           position: absolute;
           top: 10%;
-          right: -1px;
+          right: -12px;
           z-index: 1;
-          background-color: #B1E3EA;
+          background-image: url('../img/ss6/equipment/hr.png');
+          background-repeat: no-repeat;
+          background-size: cover;
         }
         &:last-child {
           &:before {
@@ -553,10 +555,28 @@ body {
       display: block;
     }
   }
-  #equip1 {
+  #equip1, #equip2 {
     background-image: url('../img/ss6/equipment/external-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  #equip2 {
+    overflow: hidden;
+    .map-wrapper {
+      padding-top: 40%;
+      position: relative;
+    }
+    .map {
+      position: absolute;
+      width: 90%;
+      top: 5%;
+      left: 5%;
+      @include breakpoint($pad) {
+        width: 80%;
+        top: 10%;
+        left: 10%;
+      }
+    }
   }
   .equip-lists {
     list-style: none;
@@ -599,8 +619,37 @@ body {
       color: #f1f1f1;
       font-size: 18px;
       position: absolute;
-      left: 0;
-      bottom: 0;
+      left: 10px;
+      bottom: 10px;
+    }
+  }
+  .model-person {
+    @include span(12);
+    .model {
+      @include span(12);
+      padding: 20px;
+    }
+    .person {
+      padding: 20px;
+      @include span(12);
+    }
+    @include breakpoint($pad) {
+      .model {
+        @include span(6);
+        padding: 30px;
+      }
+      .person {
+        @include span(6 last);
+        padding: 30px;
+      }
+    }
+
+  }
+  .inter-equip-wrapper {
+    background-color: #ccc;
+    ul {
+      padding: 0;
+      margin: 0;
     }
   }
 }
