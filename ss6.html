@@ -335,10 +335,10 @@
         </div>
         <div class="inter-equip-wrapper">
           <ul>
-            <li><button class="md-trigger ss6-spot1" data-modal="modal-1">生活空間</button></li>
-            <li><button class="md-trigger ss6-spot2" data-modal="modal-1">廚房配備</button></li>
-            <li><button class="md-trigger ss6-spot3" data-modal="modal-1">衛浴空間</button></li>
-            <li><button class="md-trigger ss6-spot4" data-modal="modal-1">電子配置</button></li>
+            <li><button class="ss6-spot1">生活空間</button></li>
+            <li><button class="ss6-spot2">衛浴空間</button></li>
+            <li><button class="ss6-spot3">客廳空間</button></li>
+            <li><button class="ss6-spot4">寢室空間</button></li>
           </ul>
         </div>
       </div>
@@ -409,23 +409,6 @@
     </footer>
 
 
-    <div class="md-modal md-effect-3" id="modal-1">
-      <!-- <img class="ring" src="img/ring.gif" alt="spinner"> -->
-      <div class="md-content">  
-        <div id="theta-wrapper">          
-          
-        </div>
-      </div>
-      <button type="button" class="md-close hamburger hamburger--collapse is-active">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-    </div>
-
-
-    <div class="md-overlay"></div><!-- the overlay element -->
-
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
@@ -434,8 +417,7 @@
     <script src="js/vendor/classie.js"></script>
     <script src="js/vendor/cbpAnimatedHeader.js"></script>
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-    <script src="js/vendor/modalEffects.js"></script>
-    
+
 
 
     <script>
@@ -479,29 +461,17 @@
 
 
         $('.ss6-spot1').on('click', function(e) {
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/1.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
+          window.open('vr.html#ss6-1','_blank');
         });
 
         $('.ss6-spot2').on('click', function(e) {
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/2.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
+          window.open('vr.html#ss6-2','_blank');
         });      
         $('.ss6-spot3').on('click', function(e) {
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/3.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
+          window.open('vr.html#ss6-3','_blank');
         });   
         $('.ss6-spot4').on('click', function(e) {
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/4.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
+          window.open('vr.html#ss6-4','_blank');
         });
       });
     </script>
