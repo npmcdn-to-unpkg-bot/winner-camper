@@ -470,7 +470,7 @@ body {
 
 #equipment {
   .bg-container {
-    height: 200px;
+    height: 150px;
     @include breakpoint($pad) {
       height: 600px;
       background-position: center;

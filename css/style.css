@@ -1819,7 +1819,7 @@ body {
 }
 
 #equipment .bg-container {
-  height: 200px;
+  height: 150px;
   background-color: #ccc;
   background-image: url("../img/ss6/equipment/bg.jpg");
   background-repeat: no-repeat;
