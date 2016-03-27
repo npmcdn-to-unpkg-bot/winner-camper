@@ -421,7 +421,6 @@
 
 
     <script>
-      var polyfilter_scriptpath = '/js/';
       $(document).ready(function() {
         $('.carousel').carousel();
         var toggle = $('.navbar-toggle.hamburger');
@@ -438,7 +437,6 @@
           link.removeClass('active');
           $(this).addClass('active');
           var target = $(this).data('id');
-          console.log(target);
           equipments.removeClass('active');
           $(target).addClass('active');
         })
