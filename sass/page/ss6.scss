@@ -466,18 +466,6 @@ body {
       }
     }
   }
-  .spot {
-    border: 0;
-    background-color: transparent;
-    display: inline-block;
-    width: 40px;
-    @include breakpoint($pad) {
-      width: 60px;
-    }
-    img {
-      width: 100%;
-    }
-  }
   #safe-spot1 {
     position: absolute;
     top: 22%;
@@ -486,22 +474,22 @@ body {
   }
   #safe-spot2 {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: -2%;
   }
   #safe-spot3 {
     position: absolute;
-    top: 63%;
+    top: 72%;
     left: 41%;
   }
   #safe-spot4 {
     position: absolute;
-    top: 63%;
-    left: 60%;
+    top: 72%;
+    left: 68%;
   }
     #safe-spot5 {
     position: absolute;
-    top: 63%;
+    top: 72%;
     right: 0;
   }
   .option-lists {
@@ -527,6 +515,45 @@ body {
         }
         color: #000;
       }
+    }
+  }
+}
+
+.spot {
+  border: 0;
+  background-color: transparent;
+  display: inline-block;
+  width: 40px;
+  @include transform(translateX(-50%) translateY(-50%));
+  @include breakpoint($pad) {
+    width: 60px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.map-wrapper {
+  .spot {
+    &.ss6-spot1 {
+      position: absolute;
+      bottom: 15%;
+      left: 55%;
+    }
+    &.ss6-spot2 {
+      position: absolute;
+      top: 26%;
+      left: 55%;
+    }
+    &.ss6-spot3 {
+      position: absolute;
+      top: 50%;
+      left: 28%;
+    }
+    &.ss6-spot4 {
+      position: absolute;
+      top: 50%;
+      right: 15%;
     }
   }
 }
@@ -648,6 +675,11 @@ body {
     .map-wrapper {
       padding-top: 40%;
       position: relative;
+      button {
+        border: 0;
+        background-color: transparent;
+
+      }
     }
     .map {
       position: absolute;

@@ -1817,20 +1817,6 @@ body {
 #safety .bg-container #safety-camper img {
   width: 100%;
 }
-#safety .spot {
-  border: 0;
-  background-color: transparent;
-  display: inline-block;
-  width: 40px;
-}
-@media (min-width: 767px) {
-  #safety .spot {
-    width: 60px;
-  }
-}
-#safety .spot img {
-  width: 100%;
-}
 #safety #safe-spot1 {
   position: absolute;
   top: 22%;
@@ -1842,22 +1828,22 @@ body {
 }
 #safety #safe-spot2 {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: -2%;
 }
 #safety #safe-spot3 {
   position: absolute;
-  top: 63%;
+  top: 72%;
   left: 41%;
 }
 #safety #safe-spot4 {
   position: absolute;
-  top: 63%;
-  left: 60%;
+  top: 72%;
+  left: 68%;
 }
 #safety #safe-spot5 {
   position: absolute;
-  top: 63%;
+  top: 72%;
   right: 0;
 }
 #safety .option-lists {
@@ -1888,6 +1874,46 @@ body {
   #safety .option-lists li button {
     font-size: 20px;
   }
+}
+
+.spot {
+  border: 0;
+  background-color: transparent;
+  display: inline-block;
+  width: 40px;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (min-width: 767px) {
+  .spot {
+    width: 60px;
+  }
+}
+.spot img {
+  width: 100%;
+}
+
+.map-wrapper .spot.ss6-spot1 {
+  position: absolute;
+  bottom: 15%;
+  left: 55%;
+}
+.map-wrapper .spot.ss6-spot2 {
+  position: absolute;
+  top: 26%;
+  left: 55%;
+}
+.map-wrapper .spot.ss6-spot3 {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+}
+.map-wrapper .spot.ss6-spot4 {
+  position: absolute;
+  top: 50%;
+  right: 15%;
 }
 
 #equipment .bg-container {
@@ -2011,6 +2037,10 @@ body {
 #equipment #equip2 .map-wrapper {
   padding-top: 40%;
   position: relative;
+}
+#equipment #equip2 .map-wrapper button {
+  border: 0;
+  background-color: transparent;
 }
 #equipment #equip2 .map {
   position: absolute;
@@ -2920,7 +2950,7 @@ button.md-close {
 #vr-header {
   height: 50px;
   background-color: #2d8b9b;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px #5ec0d0;
   position: fixed;
   top: 0;
   left: 0;
