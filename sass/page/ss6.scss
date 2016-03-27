@@ -466,11 +466,77 @@ body {
       }
     }
   }
+  .spot {
+    border: 0;
+    background-color: transparent;
+    display: inline-block;
+    width: 40px;
+    @include breakpoint($pad) {
+      width: 60px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  #safe-spot1 {
+    position: absolute;
+    top: 22%;
+    left: 40%;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  #safe-spot2 {
+    position: absolute;
+    top: 60%;
+    left: -2%;
+  }
+  #safe-spot3 {
+    position: absolute;
+    top: 63%;
+    left: 41%;
+  }
+  #safe-spot4 {
+    position: absolute;
+    top: 63%;
+    left: 60%;
+  }
+    #safe-spot5 {
+    position: absolute;
+    top: 63%;
+    right: 0;
+  }
+  .option-lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    @include breakpoint($pad) {
+      bottom: 50px;
+    }
+    width: 100%;
+    text-align: center;
+    li {
+      display: inline-block;
+      button {
+        border: 0;
+        background-color: transparent;
+        margin: 0 20px;
+        font-size: 18px;
+        @include breakpoint($pad) {
+          font-size: 20px;
+        }
+        color: #000;
+      }
+    }
+  }
 }
 
 #equipment {
   .bg-container {
     height: 150px;
+    @include breakpoint(321px) {
+      height: 200px;
+    }
     @include breakpoint($pad) {
       height: 600px;
       background-position: center;

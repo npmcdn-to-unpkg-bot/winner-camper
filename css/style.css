@@ -1817,6 +1817,78 @@ body {
 #safety .bg-container #safety-camper img {
   width: 100%;
 }
+#safety .spot {
+  border: 0;
+  background-color: transparent;
+  display: inline-block;
+  width: 40px;
+}
+@media (min-width: 767px) {
+  #safety .spot {
+    width: 60px;
+  }
+}
+#safety .spot img {
+  width: 100%;
+}
+#safety #safe-spot1 {
+  position: absolute;
+  top: 22%;
+  left: 40%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+#safety #safe-spot2 {
+  position: absolute;
+  top: 60%;
+  left: -2%;
+}
+#safety #safe-spot3 {
+  position: absolute;
+  top: 63%;
+  left: 41%;
+}
+#safety #safe-spot4 {
+  position: absolute;
+  top: 63%;
+  left: 60%;
+}
+#safety #safe-spot5 {
+  position: absolute;
+  top: 63%;
+  right: 0;
+}
+#safety .option-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  #safety .option-lists {
+    bottom: 50px;
+  }
+}
+#safety .option-lists li {
+  display: inline-block;
+}
+#safety .option-lists li button {
+  border: 0;
+  background-color: transparent;
+  margin: 0 20px;
+  font-size: 18px;
+  color: #000;
+}
+@media (min-width: 767px) {
+  #safety .option-lists li button {
+    font-size: 20px;
+  }
+}
 
 #equipment .bg-container {
   height: 150px;
@@ -1825,6 +1897,11 @@ body {
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: top center;
+}
+@media (min-width: 321px) {
+  #equipment .bg-container {
+    height: 200px;
+  }
 }
 @media (min-width: 767px) {
   #equipment .bg-container {
