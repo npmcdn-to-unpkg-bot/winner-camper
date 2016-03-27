@@ -301,6 +301,10 @@ body {
       text-align: center;
     }
     li {
+      font-size: 18px;
+      @include breakpoint($pad) {
+        font-size: 16px;
+      }
       list-style: none;
       padding: 10px 10px;
       display: block;
