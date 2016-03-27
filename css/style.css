@@ -1915,6 +1915,26 @@ body {
   top: 50%;
   right: 15%;
 }
+.map-wrapper .spot.hs6-spot1 {
+  position: absolute;
+  bottom: 40%;
+  left: 33%;
+}
+.map-wrapper .spot.hs6-spot2 {
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+}
+.map-wrapper .spot.hs6-spot3 {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+}
+.map-wrapper .spot.hs6-spot4 {
+  position: absolute;
+  bottom: 40%;
+  right: 20%;
+}
 
 #equipment .bg-container {
   height: 150px;
