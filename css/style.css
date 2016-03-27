@@ -2175,20 +2175,21 @@ body {
   max-width: 630px;
   min-width: 320px;
   height: 80%;
+  overflow: scroll;
 }
 
 .md-content {
   height: 100%;
 }
+.md-content .content {
+  padding: 20px;
+}
 
 button.md-close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 2001;
-}
-button.md-close .hamburger-inner, button.md-close .hamburger-inner::before, button.md-close .hamburger-inner::after {
-  background-color: #fff;
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 0;
+  background-color: #2d8b9b;
 }
 
 #theta-wrapper {

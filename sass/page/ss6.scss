@@ -779,22 +779,23 @@ body {
   max-width: 630px;
   min-width: 320px;
   height: 80%;
+  overflow: scroll;
 }
 
 .md-content {
   height: 100%;
+  .content {
+    padding: 20px;
+  }
 }
 
 
 
 button.md-close {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 2001;
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    background-color: #fff;
-  }
+  padding: 10px 15px;
+  font-size: 20px;
+  border: 0;
+  background-color: darken(#39AFC2, 10%);
 }
 
 #theta-wrapper {
