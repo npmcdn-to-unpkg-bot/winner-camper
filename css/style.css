@@ -2069,8 +2069,7 @@ body {
   background-image: url("../img/ss6/equipment/external-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-#equipment #equip2 {
+  background-position: center;
   overflow: hidden;
 }
 #equipment #equip2 .map-wrapper {
@@ -2104,6 +2103,48 @@ body {
 #equipment .equip-lists li img {
   width: 100%;
 }
+#equipment .left-col {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 1230px) {
+  #equipment .left-col {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+#equipment .left-col .left-wrapper {
+  padding: 30px 10px 30px 10px;
+}
+#equipment .left-col .left-wrapper img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+#equipment .left-col .text-wrapper {
+  color: #60605F;
+  text-align: center;
+}
+#equipment .left-col .text-wrapper p {
+  font-size: 18px;
+}
+#equipment .right-col {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 1230px) {
+  #equipment .right-col {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
 #equipment .grid {
   padding: 20px 0;
   max-width: 300px;
@@ -2115,6 +2156,16 @@ body {
   }
 }
 @media (min-width: 900px) {
+  #equipment .grid {
+    max-width: 900px;
+  }
+}
+@media (min-width: 1230px) {
+  #equipment .grid {
+    max-width: 600px;
+  }
+}
+@media (min-width: 1800px) {
   #equipment .grid {
     max-width: 900px;
   }

@@ -700,9 +700,10 @@ body {
     background-image: url('../img/ss6/equipment/external-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    overflow: hidden;
   }
   #equip2 {
-    overflow: hidden;
     .map-wrapper {
       padding-top: 40%;
       position: relative;
@@ -734,6 +735,34 @@ body {
       }
     }
   }
+  .left-col {
+    @include span(12);
+    @include breakpoint(1230px) {
+      @include span(6);
+    }
+    .left-wrapper {
+      padding: 30px 10px 30px 10px;
+      img {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+    }
+    .text-wrapper {
+      color: #60605F;
+      text-align: center;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .right-col {
+    @include span(12);
+    @include breakpoint(1230px) {
+      @include span(6 last);
+    }
+  }
   .grid {
     padding: 20px 0;
     max-width: 300px;
@@ -743,6 +772,15 @@ body {
     @include breakpoint(900px) {
       max-width: 900px;
     }
+    @include breakpoint(1230px) {
+      max-width: 600px;
+    }
+    @include breakpoint(1800px) {
+      max-width: 900px;
+    }
+    // @include breakpoint(900px) {
+    //   max-width: 900px;
+    // }
     margin: 0 auto;
   }
   .grid-item { 
