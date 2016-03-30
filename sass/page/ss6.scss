@@ -442,67 +442,70 @@ body {
 
 #safety {
   .bg-container {
-    background-image: url('../img/ss6/safety/bg-safety.jpg');
-    background-size: cover;
-    padding-top: 70%;
+    background-image: url('../img/ss6/equipment/external-bg.jpg');    background-size: cover;
+    min-height: 600px;
+    overflow: hidden;
+  }
+
+  .left-slide {
+    @include span(12);
     @include breakpoint($pad) {
-      padding-top: 58%;
+      @include span(8);
+    }
+    padding: 20px;
+    img {
+      width: 100%;
+    }
+    .text-wrapper {
+      padding-top: 20px;
+      color: #60605F;
+      text-align: center;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .right-side {
+    overflow: hidden;
+    padding: 0 20px 20px 20px;
+    @include span(12);
+    @include breakpoint($pad) {
+      @include span(4 last);
+      padding: 0 20px 20px 0;
+    }
+  }
+
+  .safety-list {
+    margin-top: 20px;
+    img {
+      width: 100%;
+    }
+    &.span6 {
+      @include span(12);
+    }
+    &.span6.last {
+      @include span(12 last);
+    }
+    &.span3 {
+      @include span(6);
+    }
+    &.span3.last {
+      @include span(6 last);
     }
     position: relative;
-    #safety-logo {
+    .title {
+      display: inline-block;
+      padding: 12px;
+      background-color: rgba(0,0,0,1);
+      color: #f1f1f1;
+      font-size: 18px;
       position: absolute;
-      top: 20px;
-      left: 50%;
-      width: 80px;
-      margin-left: -40px;
-      @include breakpoint($pad) {
-        width: 120px;
-        margin-left: -60px;    
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-    #safety-camper {
-      position: absolute;
-      width: 70%;
-      top: 90px;
-      @include breakpoint($pad) {
-        top: 150px;
-      }
-      left: 15%;
-      img {
-        width: 100%;
-      }
+      right: 0;
+      bottom: 0;
     }
   }
-  #safe-spot1 {
-    position: absolute;
-    top: 22%;
-    left: 40%;
-    @include transform(translateX(-50%) translateY(-50%));
-  }
-  #safe-spot2 {
-    position: absolute;
-    top: 70%;
-    left: -2%;
-  }
-  #safe-spot3 {
-    position: absolute;
-    top: 72%;
-    left: 41%;
-  }
-  #safe-spot4 {
-    position: absolute;
-    top: 72%;
-    left: 68%;
-  }
-    #safe-spot5 {
-    position: absolute;
-    top: 72%;
-    right: 0;
-  }
+  
   .option-lists {
     list-style: none;
     margin: 0;

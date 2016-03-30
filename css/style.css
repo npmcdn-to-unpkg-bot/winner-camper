@@ -1796,74 +1796,89 @@ body {
 }
 
 #safety .bg-container {
-  background-image: url("../img/ss6/safety/bg-safety.jpg");
+  background-image: url("../img/ss6/equipment/external-bg.jpg");
   background-size: cover;
-  padding-top: 70%;
+  min-height: 600px;
+  overflow: hidden;
+}
+#safety .left-slide {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 20px;
+}
+@media (min-width: 767px) {
+  #safety .left-slide {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+#safety .left-slide img {
+  width: 100%;
+}
+#safety .left-slide .text-wrapper {
+  padding-top: 20px;
+  color: #60605F;
+  text-align: center;
+}
+#safety .left-slide .text-wrapper p {
+  font-size: 18px;
+}
+#safety .right-side {
+  overflow: hidden;
+  padding: 0 20px 20px 20px;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 767px) {
+  #safety .right-side {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+    padding: 0 20px 20px 0;
+  }
+}
+#safety .safety-list {
+  margin-top: 20px;
   position: relative;
 }
-@media (min-width: 767px) {
-  #safety .bg-container {
-    padding-top: 58%;
-  }
-}
-#safety .bg-container #safety-logo {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  width: 80px;
-  margin-left: -40px;
-}
-@media (min-width: 767px) {
-  #safety .bg-container #safety-logo {
-    width: 120px;
-    margin-left: -60px;
-  }
-}
-#safety .bg-container #safety-logo img {
+#safety .safety-list img {
   width: 100%;
 }
-#safety .bg-container #safety-camper {
-  position: absolute;
-  width: 70%;
-  top: 90px;
-  left: 15%;
-}
-@media (min-width: 767px) {
-  #safety .bg-container #safety-camper {
-    top: 150px;
-  }
-}
-#safety .bg-container #safety-camper img {
+#safety .safety-list.span6 {
   width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
 }
-#safety #safe-spot1 {
-  position: absolute;
-  top: 22%;
-  left: 40%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+#safety .safety-list.span6.last {
+  width: 100%;
+  float: right;
+  margin-right: 0;
 }
-#safety #safe-spot2 {
-  position: absolute;
-  top: 70%;
-  left: -2%;
+#safety .safety-list.span3 {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
 }
-#safety #safe-spot3 {
-  position: absolute;
-  top: 72%;
-  left: 41%;
+#safety .safety-list.span3.last {
+  width: 49.15254%;
+  float: right;
+  margin-right: 0;
 }
-#safety #safe-spot4 {
+#safety .safety-list .title {
+  display: inline-block;
+  padding: 12px;
+  background-color: black;
+  color: #f1f1f1;
+  font-size: 18px;
   position: absolute;
-  top: 72%;
-  left: 68%;
-}
-#safety #safe-spot5 {
-  position: absolute;
-  top: 72%;
   right: 0;
+  bottom: 0;
 }
 #safety .option-lists {
   list-style: none;
