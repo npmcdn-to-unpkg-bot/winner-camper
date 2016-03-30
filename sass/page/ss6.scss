@@ -153,6 +153,7 @@ body {
 }
 
 #looking {
+  overflow: hidden;
   .bg-container {
     min-height: 1000px;
     @include breakpoint($pad) {
@@ -269,31 +270,39 @@ body {
     }
     background-image: url('../img/ss6/color-bg.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: bottom center;
   }
   .color-container {
     position: absolute;
-    width: 300px;
-    top: 40%;
+    width: 80%;
+    bottom: 75px;
     left: 50%;
-    margin-left: -150px;
-    @include breakpoint($pad) {
-      width: 400px;
-      margin-left: -200px;     
+    @include transform(translateX(-50%));
+    @include breakpoint(480px) {
+      width: 60%;
+      bottom: 60px;
     }
-
+    @include breakpoint($pad) {
+      width: 90%;
+      bottom: 80px;
+    }
+    @include breakpoint(960px) {
+      width: 60%;
+    }
     img {
       width: 100%;
     }
   }
   .size-container {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     margin-right: 0;
     @include breakpoint($pad) {
       margin-right: 320px; 
+      bottom: 0;
+      top: auto;
     }
     ul {
       padding: 0;
@@ -318,13 +327,15 @@ body {
         }
       }
       &:before {
-        content: "";
-        width: 2px;
-        height: 50%;
-        position: absolute;
-        top: 10px;
-        right: -5px;
-        background-color: #000;
+        @include breakpoint($pad) {
+          content: "";
+          width: 2px;
+          height: 50%;
+          position: absolute;
+          top: 10px;
+          right: -5px;
+          background-color: #000;        
+        }
       }
     }
     background-color: rgba(255,255,255,0.7);

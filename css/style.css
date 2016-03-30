@@ -1473,6 +1473,7 @@ body {
 }
 
 #looking {
+  overflow: hidden;
   position: relative;
 }
 #looking .bg-container {
@@ -1594,7 +1595,7 @@ body {
   margin-right: 0;
   background-image: url("../img/ss6/color-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
 }
 @media (min-width: 767px) {
   #camper-color .bg-container {
@@ -1604,15 +1605,29 @@ body {
 }
 #camper-color .color-container {
   position: absolute;
-  width: 300px;
-  top: 40%;
+  width: 80%;
+  bottom: 75px;
   left: 50%;
-  margin-left: -150px;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media (min-width: 480px) {
+  #camper-color .color-container {
+    width: 60%;
+    bottom: 60px;
+  }
 }
 @media (min-width: 767px) {
   #camper-color .color-container {
-    width: 400px;
-    margin-left: -200px;
+    width: 90%;
+    bottom: 80px;
+  }
+}
+@media (min-width: 960px) {
+  #camper-color .color-container {
+    width: 60%;
   }
 }
 #camper-color .color-container img {
@@ -1620,7 +1635,7 @@ body {
 }
 #camper-color .size-container {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   margin-right: 0;
@@ -1629,6 +1644,8 @@ body {
 @media (min-width: 767px) {
   #camper-color .size-container {
     margin-right: 320px;
+    bottom: 0;
+    top: auto;
   }
 }
 #camper-color .size-container ul {
@@ -1656,14 +1673,16 @@ body {
 #camper-color .size-container li:last-child:before {
   width: 0;
 }
-#camper-color .size-container li:before {
-  content: "";
-  width: 2px;
-  height: 50%;
-  position: absolute;
-  top: 10px;
-  right: -5px;
-  background-color: #000;
+@media (min-width: 767px) {
+  #camper-color .size-container li:before {
+    content: "";
+    width: 2px;
+    height: 50%;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    background-color: #000;
+  }
 }
 #camper-color .sidebar {
   position: static;
