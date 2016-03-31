@@ -479,6 +479,45 @@ body {
     min-height: 600px;
     overflow: hidden;
   }
+  &.hs6 {
+    .left-slide {
+      @include span(12);
+      @include breakpoint($pad) {
+        @include span(6);
+      }
+      @include breakpoint(960px) {
+        padding: 20px 0 20px 100px;
+      }
+      padding: 20px;
+    }
+    .right-side {
+      @include span(12);
+      @include breakpoint($pad) {
+        @include span(6 last);
+      }
+      @include breakpoint(960px) {
+        padding: 0 100px 20px 0;
+      }
+      .first-col {
+        @include span(12);
+        @include breakpoint($pad) {
+          @include span(6);
+        }
+        img {
+          width: 100%;
+        }
+      }
+      .sec-col {
+        @include span(12);
+        @include breakpoint($pad) {
+          @include span(6 last);
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 
   .left-slide {
     @include span(12);
