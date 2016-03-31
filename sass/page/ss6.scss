@@ -593,6 +593,11 @@ body {
 }
 
 #equipment {
+  &.hs6 {
+    .bg-container {
+      background-image: url('../img/hs6/equipment/bg.jpg');
+    }
+  }
   .bg-container {
     height: 150px;
     @include breakpoint(321px) {
@@ -604,7 +609,7 @@ body {
       background-size: cover;
     }
     background-color: #ccc;
-    background-image: url('../img/hs6/equipment/bg.jpg');
+    background-image: url('../img/ss6/equipment/bg.jpg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: top center;
