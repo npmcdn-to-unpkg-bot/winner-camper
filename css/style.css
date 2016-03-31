@@ -1476,6 +1476,41 @@ body {
   overflow: hidden;
   position: relative;
 }
+#looking.hs6 .bg-container {
+  background-image: url("../img/hs6/looking-bg.jpg");
+  background-position: bottom right;
+  min-height: 400px;
+}
+@media (min-width: 767px) {
+  #looking.hs6 .bg-container {
+    min-height: 800px;
+  }
+}
+#looking.hs6 #looking-solgan {
+  position: absolute;
+  width: 90%;
+  top: auto;
+  bottom: 0;
+}
+#looking.hs6 #looking-solgan h2 {
+  font-size: 18px;
+}
+#looking.hs6 #looking-solgan h3 {
+  font-size: 12px;
+}
+@media (min-width: 767px) {
+  #looking.hs6 #looking-solgan {
+    top: auto;
+    bottom: 0;
+    left: 50px;
+  }
+  #looking.hs6 #looking-solgan h2 {
+    font-size: 24px;
+  }
+  #looking.hs6 #looking-solgan h3 {
+    font-size: 18px;
+  }
+}
 #looking .bg-container {
   min-height: 1000px;
   background-image: url("../img/ss6/looking-bg.jpg");

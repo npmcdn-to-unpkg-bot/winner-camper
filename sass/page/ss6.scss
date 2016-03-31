@@ -153,6 +153,39 @@ body {
 }
 
 #looking {
+  &.hs6 {
+    .bg-container {
+      background-image: url('../img/hs6/looking-bg.jpg');
+      background-position: bottom right;
+      min-height: 400px;
+      @include breakpoint($pad) {
+        min-height: 800px;
+      }
+    }
+    #looking-solgan {
+      position: absolute;
+      width: 90%;
+      top: auto;
+      bottom: 0;
+      h2 {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 12px;
+      }
+      @include breakpoint($pad) {
+        top: auto;
+        bottom: 0;
+        left: 50px;
+        h2 {
+          font-size: 24px;
+        }
+        h3 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
   overflow: hidden;
   .bg-container {
     min-height: 1000px;
