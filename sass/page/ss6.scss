@@ -161,6 +161,9 @@ body {
       @include breakpoint($pad) {
         min-height: 800px;
       }
+      @include breakpoint(1600px) {
+        background-position: center;
+      }
     }
     #looking-solgan {
       position: absolute;
@@ -672,7 +675,7 @@ body {
   }
   .bg-container {
     height: 150px;
-    @include breakpoint(321px) {
+    @include breakpoint(460px) {
       height: 200px;
     }
     @include breakpoint($pad) {
@@ -782,6 +785,53 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+  }
+  #equip1 {
+    .upper-wrapper, .lower-wrapper {
+      @include span(12);
+      .equip-list {
+        padding: 20px 20px 0 20px;
+        @include span(12);
+        @include breakpoint($pad) {
+          @include span(6);
+          &:nth-child(2n) {
+            @include span(6 last);
+          }
+        }
+        @include breakpoint(1280px) {
+          @include span(3);
+          &:nth-child(2n) {
+            @include span(3)
+          }
+          &:last-child {
+            @include span(3 last);
+          }    
+        }
+        .ratio-wrapper {
+          width: 100%;
+          padding-top: 64%;
+          position: relative;
+          overflow: hidden;
+        }
+        img {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    .lower-wrapper {
+      padding-bottom: 20px;
+      .equip-list { 
+        .ratio-wrapper {
+          width: 100%;
+          padding-top: 150%;
+          position: relative;
+          overflow: hidden;
+        }
+      }
+    }
   }
   #equip2 {
     .map-wrapper {

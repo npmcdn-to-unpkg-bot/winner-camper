@@ -1486,6 +1486,11 @@ body {
     min-height: 800px;
   }
 }
+@media (min-width: 1600px) {
+  #looking.hs6 .bg-container {
+    background-position: center;
+  }
+}
 #looking.hs6 #looking-solgan {
   position: absolute;
   width: 90%;
@@ -2085,7 +2090,7 @@ body {
   background-size: 100% auto;
   background-position: top center;
 }
-@media (min-width: 321px) {
+@media (min-width: 460px) {
   #equipment .bg-container {
     height: 200px;
   }
@@ -2192,6 +2197,69 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+}
+#equipment #equip1 .upper-wrapper, #equipment #equip1 .lower-wrapper {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+#equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
+  padding: 20px 20px 0 20px;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 767px) {
+  #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  #equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1280px) {
+  #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  #equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  #equipment #equip1 .upper-wrapper .equip-list:last-child, #equipment #equip1 .lower-wrapper .equip-list:last-child {
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+}
+#equipment #equip1 .upper-wrapper .equip-list .ratio-wrapper, #equipment #equip1 .lower-wrapper .equip-list .ratio-wrapper {
+  width: 100%;
+  padding-top: 64%;
+  position: relative;
+  overflow: hidden;
+}
+#equipment #equip1 .upper-wrapper .equip-list img, #equipment #equip1 .lower-wrapper .equip-list img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#equipment #equip1 .lower-wrapper {
+  padding-bottom: 20px;
+}
+#equipment #equip1 .lower-wrapper .equip-list .ratio-wrapper {
+  width: 100%;
+  padding-top: 150%;
+  position: relative;
   overflow: hidden;
 }
 #equipment #equip2 .map-wrapper {
