@@ -789,16 +789,31 @@ body {
   #equip1 {
     .upper-wrapper, .lower-wrapper {
       @include span(12);
+      padding: 0 10px;
+      @include breakpoint($pad) {
+        padding: 0 20px;
+      }
+      @include breakpoint(1280px) {
+        padding: 0 10%;
+      }
       .equip-list {
-        padding: 20px 20px 0 20px;
-        @include span(12);
+        padding: 10px 0 0 0;
+        @include span(6);
+        &:nth-child(2n) {
+          @include span(6 last);
+        }
         @include breakpoint($pad) {
-          @include span(6);
+          padding: 20px 0 0 0;
+          @include span(3);
           &:nth-child(2n) {
-            @include span(6 last);
+            @include span(3 last);
           }
+          &:last-child {
+            @include span(3 last);
+          }   
         }
         @include breakpoint(1280px) {
+          padding: 20px 0 0 0;
           @include span(3);
           &:nth-child(2n) {
             @include span(3)

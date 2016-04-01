@@ -2204,28 +2204,50 @@ body {
   float: left;
   margin-left: 0;
   margin-right: 0;
+  padding: 0 10px;
+}
+@media (min-width: 767px) {
+  #equipment #equip1 .upper-wrapper, #equipment #equip1 .lower-wrapper {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1280px) {
+  #equipment #equip1 .upper-wrapper, #equipment #equip1 .lower-wrapper {
+    padding: 0 10%;
+  }
 }
 #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
-  padding: 20px 20px 0 20px;
-  width: 100%;
+  padding: 10px 0 0 0;
+  width: 49.15254%;
   float: left;
-  margin-left: 0;
+  margin-right: 1.69492%;
+}
+#equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
+  width: 49.15254%;
+  float: right;
   margin-right: 0;
 }
 @media (min-width: 767px) {
   #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
-    width: 49.15254%;
+    padding: 20px 0 0 0;
+    width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
   }
   #equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
-    width: 49.15254%;
+    width: 23.72881%;
+    float: right;
+    margin-right: 0;
+  }
+  #equipment #equip1 .upper-wrapper .equip-list:last-child, #equipment #equip1 .lower-wrapper .equip-list:last-child {
+    width: 23.72881%;
     float: right;
     margin-right: 0;
   }
 }
 @media (min-width: 1280px) {
   #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
+    padding: 20px 0 0 0;
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
