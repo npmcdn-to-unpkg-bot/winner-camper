@@ -1841,12 +1841,15 @@ body {
   min-height: 600px;
   overflow: hidden;
 }
+#safety.hs6 .safety-list {
+  margin-top: 10px;
+}
 #safety.hs6 .left-slide {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  padding: 20px;
+  padding: 10px;
 }
 @media (min-width: 767px) {
   #safety.hs6 .left-slide {
@@ -1857,10 +1860,11 @@ body {
 }
 @media (min-width: 960px) {
   #safety.hs6 .left-slide {
-    padding: 20px 0 20px 100px;
+    padding: 20px 0 20px 10%;
   }
 }
 #safety.hs6 .right-side {
+  padding: 0 10px 10px 10px;
   width: 100%;
   float: left;
   margin-left: 0;
@@ -1868,6 +1872,7 @@ body {
 }
 @media (min-width: 767px) {
   #safety.hs6 .right-side {
+    padding: 10px 20px 20px 0;
     width: 49.15254%;
     float: right;
     margin-right: 0;
@@ -1875,14 +1880,13 @@ body {
 }
 @media (min-width: 960px) {
   #safety.hs6 .right-side {
-    padding: 0 100px 20px 0;
+    padding: 10px 10% 20px 0;
   }
 }
 #safety.hs6 .right-side .first-col {
-  width: 100%;
+  width: 49.15254%;
   float: left;
-  margin-left: 0;
-  margin-right: 0;
+  margin-right: 1.69492%;
 }
 @media (min-width: 767px) {
   #safety.hs6 .right-side .first-col {
@@ -1891,13 +1895,20 @@ body {
     margin-right: 1.69492%;
   }
 }
+#safety.hs6 .right-side .first-col .ratio-wrapper {
+  padding-top: 75%;
+  position: relative;
+  overflow: hidden;
+}
 #safety.hs6 .right-side .first-col img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 #safety.hs6 .right-side .sec-col {
-  width: 100%;
-  float: left;
-  margin-left: 0;
+  width: 49.15254%;
+  float: right;
   margin-right: 0;
 }
 @media (min-width: 767px) {
@@ -1907,21 +1918,34 @@ body {
     margin-right: 0;
   }
 }
+#safety.hs6 .right-side .sec-col .ratio-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-top: 115%;
+}
 #safety.hs6 .right-side .sec-col img {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 #safety .left-slide {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  padding: 20px;
+  padding: 10px;
 }
 @media (min-width: 767px) {
   #safety .left-slide {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
+  }
+}
+@media (min-width: 960px) {
+  #safety .left-slide {
+    padding: 20px 0 20px 10%;
   }
 }
 #safety .left-slide img {
@@ -1937,7 +1961,7 @@ body {
 }
 #safety .right-side {
   overflow: hidden;
-  padding: 0 20px 20px 20px;
+  padding: 0 10px 10px 10px;
   width: 100%;
   float: left;
   margin-left: 0;
@@ -1945,15 +1969,25 @@ body {
 }
 @media (min-width: 767px) {
   #safety .right-side {
+    padding: 0 20px 20px 0;
     width: 32.20339%;
     float: right;
     margin-right: 0;
-    padding: 0 20px 20px 0;
+  }
+}
+@media (min-width: 960px) {
+  #safety .right-side {
+    padding: 0 10% 20px 0;
   }
 }
 #safety .safety-list {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
+}
+@media (min-width: 767px) {
+  #safety .safety-list {
+    margin-top: 20px;
+  }
 }
 #safety .safety-list img {
   width: 100%;
@@ -2236,8 +2270,8 @@ body {
   }
   #equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
     width: 23.72881%;
-    float: right;
-    margin-right: 0;
+    float: left;
+    margin-right: 1.69492%;
   }
   #equipment #equip1 .upper-wrapper .equip-list:last-child, #equipment #equip1 .lower-wrapper .equip-list:last-child {
     width: 23.72881%;
