@@ -1,5 +1,11 @@
-#motorhome-page {
+#motorhome-page, #trailer-page {
   min-height: 500px;
+  @include breakpoint(960px) {
+    min-height: 800px;
+  }
+  @include breakpoint(1600px) {
+    min-height: 960px;
+  }
   .bg-container {
     position: relative;
     .camper-wrapper {
@@ -20,7 +26,33 @@
         width: 100%;
       }
     }
+    .trailer-wrapper {
+      width: 130%;
+      position: absolute;
+      bottom: 50px;
+      right: -20%;
+      @include breakpoint(460px) {
+        width: 100%;
+        right: 0;
+      }
+      @include breakpoint(960px) {
+        width: 80%;
+        bottom: 0;
+        right: 0;
+      }
+      @include breakpoint(1600px) {
+        width: 60%;
+      }
+      
+      img {
+        width: 100%;
+      }
+    }
   }
+}
+
+#trailer-page {
+  background-position: bottom center;
 }
 
 #contact-form {

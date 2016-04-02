@@ -2570,35 +2570,76 @@ button.md-close {
   font-size: 1.15em;
 }
 
-#motorhome-page {
+#motorhome-page, #trailer-page {
   min-height: 500px;
 }
-#motorhome-page .bg-container {
+@media (min-width: 960px) {
+  #motorhome-page, #trailer-page {
+    min-height: 800px;
+  }
+}
+@media (min-width: 1600px) {
+  #motorhome-page, #trailer-page {
+    min-height: 960px;
+  }
+}
+#motorhome-page .bg-container, #trailer-page .bg-container {
   position: relative;
 }
-#motorhome-page .bg-container .camper-wrapper {
+#motorhome-page .bg-container .camper-wrapper, #trailer-page .bg-container .camper-wrapper {
   position: absolute;
   width: 300px;
   right: 10px;
   bottom: 50px;
 }
 @media (min-width: 455px) {
-  #motorhome-page .bg-container .camper-wrapper {
+  #motorhome-page .bg-container .camper-wrapper, #trailer-page .bg-container .camper-wrapper {
     width: 400px;
   }
 }
 @media (min-width: 767px) {
-  #motorhome-page .bg-container .camper-wrapper {
+  #motorhome-page .bg-container .camper-wrapper, #trailer-page .bg-container .camper-wrapper {
     width: 500px;
   }
 }
 @media (min-width: 1000px) {
-  #motorhome-page .bg-container .camper-wrapper {
+  #motorhome-page .bg-container .camper-wrapper, #trailer-page .bg-container .camper-wrapper {
     width: 700px;
   }
 }
-#motorhome-page .bg-container .camper-wrapper img {
+#motorhome-page .bg-container .camper-wrapper img, #trailer-page .bg-container .camper-wrapper img {
   width: 100%;
+}
+#motorhome-page .bg-container .trailer-wrapper, #trailer-page .bg-container .trailer-wrapper {
+  width: 130%;
+  position: absolute;
+  bottom: 50px;
+  right: -20%;
+}
+@media (min-width: 460px) {
+  #motorhome-page .bg-container .trailer-wrapper, #trailer-page .bg-container .trailer-wrapper {
+    width: 100%;
+    right: 0;
+  }
+}
+@media (min-width: 960px) {
+  #motorhome-page .bg-container .trailer-wrapper, #trailer-page .bg-container .trailer-wrapper {
+    width: 80%;
+    bottom: 0;
+    right: 0;
+  }
+}
+@media (min-width: 1600px) {
+  #motorhome-page .bg-container .trailer-wrapper, #trailer-page .bg-container .trailer-wrapper {
+    width: 60%;
+  }
+}
+#motorhome-page .bg-container .trailer-wrapper img, #trailer-page .bg-container .trailer-wrapper img {
+  width: 100%;
+}
+
+#trailer-page {
+  background-position: bottom center;
 }
 
 #contact-form {
