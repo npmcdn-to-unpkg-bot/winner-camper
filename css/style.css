@@ -2570,6 +2570,10 @@ button.md-close {
   font-size: 1.15em;
 }
 
+#motorhome-page {
+  min-height: 500px;
+}
+
 #footer-sitemap {
   width: 100%;
   float: left;
