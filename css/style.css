@@ -2656,6 +2656,102 @@ button.md-close {
   height: 300px;
 }
 
+#constructure-wrapper {
+  min-height: 500px;
+}
+@media (min-width: 960px) {
+  #constructure-wrapper {
+    min-height: 800px;
+  }
+}
+@media (min-width: 1600px) {
+  #constructure-wrapper {
+    min-height: 960px;
+  }
+}
+#constructure-wrapper .bg-container {
+  position: relative;
+}
+#constructure-wrapper .bg-container .main {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 320px;
+}
+@media (min-width: 460px) {
+  #constructure-wrapper .bg-container .main {
+    width: 460px;
+  }
+}
+#constructure-wrapper .bg-container .main img {
+  width: 100%;
+}
+#constructure-wrapper .bg-container .main h1 {
+  text-align: center;
+  font-size: 48px;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media (min-width: 960px) {
+  #constructure-wrapper .bg-container .main h1 {
+    font-size: 72px;
+  }
+}
+#constructure-wrapper .bg-container .stand {
+  position: absolute;
+  width: 80%;
+  bottom: 20px;
+  left: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media (min-width: 460px) {
+  #constructure-wrapper .bg-container .stand {
+    width: 50%;
+    bottom: 50px;
+  }
+}
+@media (min-width: 960px) {
+  #constructure-wrapper .bg-container .stand {
+    width: 30%;
+    bottom: 10%;
+  }
+}
+@media (min-width: 1600px) {
+  #constructure-wrapper .bg-container .stand {
+    width: 30%;
+    bottom: 10%;
+  }
+}
+#constructure-wrapper .bg-container .stand img {
+  width: 100%;
+}
+#constructure-wrapper .bg-container .footer {
+  position: absolute;
+  width: 100%;
+  padding-top: 8%;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+#constructure-wrapper .bg-container .footer img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
 #footer-sitemap {
   width: 100%;
   float: left;
