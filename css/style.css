@@ -2696,10 +2696,10 @@ button.md-close {
   position: absolute;
   bottom: 8%;
   left: 50%;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -moz-transform: translateX(-50%) rotate(3deg);
+  -ms-transform: translateX(-50%) rotate(3deg);
+  -webkit-transform: translateX(-50%) rotate(3deg);
+  transform: translateX(-50%) rotate(3deg);
 }
 @media (min-width: 960px) {
   #constructure-wrapper .bg-container .main h1 {
