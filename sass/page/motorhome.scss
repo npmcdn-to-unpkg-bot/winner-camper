@@ -1,6 +1,38 @@
 #motorhome-page {
   min-height: 500px;
   .bg-container {
-
+    position: relative;
+    .camper-wrapper {
+      position: absolute;
+      width: 300px;
+      right: 10px;
+      bottom: 50px;
+      @include breakpoint(455px) {
+        width: 400px;
+      }
+      @include breakpoint($pad) {
+        width: 500px;
+      }
+      @include breakpoint(1000px) {
+        width: 700px;
+      }
+      img {
+        width: 100%;
+      }
+    }
   }
+}
+
+#contact-form {
+  overflow: hidden;
+  background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+#form-div {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color:rgba(72,72,72,0.4);
+  height: 300px;
 }
