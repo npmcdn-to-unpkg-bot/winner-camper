@@ -91,7 +91,7 @@
       <div class="carousel-inner">
         <div class="item active">
           <!-- Set the first background image using inline CSS below. -->
-          <div class="fill responsive" style="background-image:url('img/home/slide1.jpg');"></div>
+          <div class="fill responsive b-lazy" data-src="img/home/slide1.jpg"></div>
           <div class="carousel-caption">
             <a href="" class="know-more">
               <img src="img/home/know-more.png" alt="瞭解更多">
@@ -183,8 +183,13 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/lib/blazy.min.js"></script>
+
     <script>
       $(document).ready(function() {
+
+        var bLazy = new Blazy();
+
         $('.carousel').carousel();
         var toggle = $('.navbar-toggle.hamburger');
         toggle.on('click', function(e) {
