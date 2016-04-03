@@ -2640,6 +2640,7 @@ button.md-close {
 
 #trailer-page {
   background-position: bottom center;
+  overflow: hidden;
 }
 
 #contact-form {
