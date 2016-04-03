@@ -3,16 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>360度展示</title>
-    <meta name="description" content="">
+    <title>唯樂露營車 - 露營知識</title>
+    <meta name="description" content="唯樂露營車，露營車專賣、營區規劃、露營車出租">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+
+
+    <meta property="og:url" content="http://weile-tech.com">
+    <meta property="og:type" content="website">
+    <meta property="fb:admins" content="1521106495">
+    <meta property="fb:app_id" content="567965303332474">
+    <meta property="og:title" content="唯樂露營車">
+    <meta property="og:description" content="唯樂露營車，露營車專賣、營區規劃、露營車出租">
+    <meta property="og:image" content="http://weile-tech.com/img/og/index.jpg">
+    <meta property="og:image" content="http://weile-tech.com/img/home/slide1.jpg">
+    <meta property="og:image" content="http://weile-tech.com/img/home/slide2.jpg">
+    <meta property="og:image" content="http://weile-tech.com/img/home/slide3.jpg">
   </head>
   <body class="cbp-spmenu-push">
     <!--[if lt IE 8]>
@@ -31,8 +45,8 @@
 
             <ul class="main-links cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
               <li class="first-level">
-                <a href="index.html">
-                  <span>車型介紹</span>
+                <a>
+                  <span>定點式</span>
                 </a>
                 <ul class="dropdown">
                   <li class="list">
@@ -44,13 +58,13 @@
                 </ul>
               </li>
               <li class="first-level">
-                <a href="index.html"><span>營地資訊</span></a>
+                <a href="motorhome.html"><span>自走式</span></a>
               </li>
               <li class="first-level">
-                <a href="index.html"><span>露營知識</span></a>
+                <a href="trailer.html"><span>拖掛式</span></a>
               </li>
               <li class="first-level">
-                <a href="360.html"><span>社群連結</span></a>
+                <a href="winner.html"><span>悠遊唯樂</span></a>
               </li>
             </ul>
 
@@ -65,30 +79,17 @@
       </div>
     </header>
 
-
-    <div class="container">
-      <div class="wrap">
-        <div class="internal-wrapper">
-          <img src="img/ss6-2d.png" alt="平面配置圖">
-          <a id="hotspot_1" class="hotspot"></a>
-          <a id="hotspot_2" class="hotspot"></a>
-          <a id="hotspot_3" class="hotspot"></a>
-          <a id="hotspot_4" class="hotspot"></a>
+    <div id="constructure-wrapper" class="fill">
+      <div class="bg-container fill" style="background-image:url('img/constructure/bg.jpg');">
+        <div class="main">
+          <img src="img/constructure/hang.png" alt="吊牌">
+          <h1>網頁<br>建構中</h1>
         </div>
-
-      </div>
-    </div>
-
-
-    <div id="lightbox" class="pageload-overlay">
-      <button type="button" class="lightbox-toggle hamburger hamburger--collapse is-active" data-target=".navbar-main">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div id="outer-theta">
-        <div id="theta-wrapper">
-
+        <div class="stand">
+          <img src="img/constructure/stand.png" alt="立牌">
+        </div>
+        <div class="footer">
+          <img src="img/constructure/footer.png" alt="反光標誌">
         </div>
       </div>
     </div>
@@ -145,6 +146,7 @@
             </a>
           </li>
         </ul>
+        <p class="announce">本網站所提供之圖片、數據及規格等資料僅供參考。Winner Technology Inc. 保有隨時改變露營車和其他產品之設計以及規格的權利。Winner Technology Inc. 亦保留隨時對車款及產品出售與否及其內容記載變更之權利。 任何於本網站所提及之效能數據、測試結果或騎乘距離等，均可能因其他因素（包括但不限於：個人騎乘行為或使用習慣、騎士人數及重量、道路狀況、道路速限、天候狀況、風速大小等因素）之影響而造成結果有所差異。 相關測試情境，請參考規格比較表。</p>
       </div>
       <div class="copyright">
         <p>
@@ -153,68 +155,18 @@
       </div>
     </footer>
 
-
-
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-
-
-    <script src="js/lib/async.js"></script>
-    <script src="js/lib/three.js"></script>
-    <script src="js/lib/OrbitControls.js"></script>
-    <script src="js/lib/theta-viewer.js"></script>
-
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script>
       $(document).ready(function() {
-
-        var nav = $('.navbar-toggle.hamburger');
-        nav.on('click', function(e) {
+        $('.carousel').carousel();
+        var toggle = $('.navbar-toggle.hamburger');
+        toggle.on('click', function(e) {
           $(this).toggleClass('is-active');
           $('body').toggleClass('cbp-spmenu-push-toleft');
           $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
-        });
 
-        var toggle = $('.lightbox-toggle.hamburger');
-        toggle.on('click', function(e) {
-          $('#lightbox').removeClass('show');
-          $('#theta-wrapper').html("");
-        });
-        $('#hotspot_1').on('click', function(e) {
-          e.preventDefault();
-          
-          $('#lightbox').addClass('show');
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/1.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
-        });
-
-        $('#hotspot_2').on('click', function(e) {
-          e.preventDefault();
-          
-          $('#lightbox').addClass('show');
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/2.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
-        });      
-        $('#hotspot_3').on('click', function(e) {
-          e.preventDefault();
-          
-          $('#lightbox').addClass('show');
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/3.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
-        });   
-        $('#hotspot_4').on('click', function(e) {
-          e.preventDefault();
-          
-          $('#lightbox').addClass('show');
-          var viewer = new ThetaViewer( document.getElementById("theta-wrapper") );
-          viewer.images = ["img/ss6-360/4.jpg"];
-          viewer.autoRotate = true;
-          viewer.load();
         });
       });
     </script>
