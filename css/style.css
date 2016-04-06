@@ -2753,6 +2753,29 @@ button.md-close {
   top: 0;
 }
 
+#contact-top {
+  margin-top: 50px;
+  background-color: #F5F5F5;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 100%;
+  background-image: url("../img/ss6/bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 767px) {
+  #contact-top {
+    margin-top: 100px;
+  }
+}
+@media (min-width: 767px) {
+  #contact-top {
+    padding-top: 56.7%;
+  }
+}
+
 #footer-sitemap {
   width: 100%;
   float: left;
