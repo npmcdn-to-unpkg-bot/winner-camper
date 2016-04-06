@@ -32,7 +32,7 @@
     left: 50%;
     margin-left: -250px;  
   }
-    @include breakpoint(1400px) {
+  @include breakpoint(1400px) {
     width: 500px;
     top: 50%;
     left: 50%;

@@ -9,7 +9,215 @@
   @include breakpoint($pad) {
     padding-top: 56.7%;
   }
-  background-image: url('../img/ss6/bg.jpg');
+  background-image: url('../img/contact/bg.jpg');
   background-size: cover;
   background-position: center;
+  position: relative;
+  #ss6-camper {
+    position: absolute;
+    @include transform(translateX(-60px) translateY(0));
+  }
+  #hs6-camper {
+    position: absolute;
+    img {
+      width: 100%;
+    }
+    width: 90%;
+    top: 20%;
+    left: 10%;
+    @include transform(translateX(120px) translateY(-10px));
+    @include breakpoint($pad) {
+      width: 500px;
+      top: 25%;
+      left: 50%;
+      margin-left: -250px;  
+    }
+    @include breakpoint(1024px) {
+      width: 500px;
+      top: 35%;
+      left: 50%;
+      margin-left: -250px;  
+    }
+    @include breakpoint(1400px) {
+      width: 500px;
+      top: 50%;
+      left: 50%;
+      margin-left: -250px;  
+    }
+  }
+}
+
+#service {
+  @include span(12);
+  height: 500px;
+  background-image: url('../img/contact/custom-service.jpg');
+  background-size: cover;
+  background-position: right bottom;
+}
+
+#exhibition {
+  @include span(12);
+  .bg-container {
+    height: 300px;
+    background-image: url('../img/contact/info-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .content-wrapper {
+    background-color: #7C0072;
+    padding: 30px 10% 80px 10%;
+  }
+  .img-logo {
+    display: inline-block;
+    width: 300px;
+    img {
+      width: 100%;
+    }
+  }
+  .title-text-wrapper {
+    display: inline-block;
+    padding-left: 30px;
+    vertical-align: bottom; 
+    h2, h3 {
+      margin: 0;
+      color: #fff;
+    }
+    h2 {
+      font-size: 48px;
+    }
+    h3 {
+      font-size: 32px;
+      @include translateY(-10px);
+    }
+  }
+  .text-content {
+    color: #fff;
+    font-size: 18px;
+    padding: 50px 0;
+    p {
+      margin: 0 0 30px;
+    }
+  }
+  .content-footer {
+    overflow: hidden;
+    position: relative;
+    .footer-logo {
+      width: 100%;
+      padding: 0 50px;
+      @include breakpoint($pad) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        padding: 0;
+      }
+      display: inline-block;
+      
+      img {
+        width: 100%;
+      }
+    }
+    .footer-content {
+      padding-left: 30px;
+      color: #fff;
+      h2 {
+        font-size: 24px;
+        margin: 0 0 20px;
+      }
+      @include breakpoint($pad) {
+        margin-left: 200px;
+      }
+    }
+  }
+}
+
+
+
+nav.motorhomes-nav.contact {
+  &.fixed {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    li {
+      > a {
+        padding: 10px 0;
+        @include breakpoint($pad) {
+          padding: 20px 0;
+        }
+      }
+      display: none;
+      @include breakpoint($pad) {
+        display: block
+      }
+      &.active {
+        display: block;
+      }
+    }
+  }
+  @include span(12);
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    text-align: center;
+    position: relative;
+    @include span(12);
+    &:nth-child(n+2) {
+      display: none;
+    }
+    @include breakpoint($pad) {
+      &:nth-child(n+2) {
+        display: block;
+      }
+      @include span(4);
+      &:before {
+        content: "";
+        width: 14px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -14px;
+        background-image: url("../img/ss6/hr.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &:last-child {
+      @include breakpoint($pad) {
+        @include span(4 last);
+        &:before {
+          width: 0;
+        }       
+      }
+    }
+    > a {
+      display: inline-block;
+      padding: 10px 0;
+      @include breakpoint($pad) {
+        padding: 30px 0;
+      }
+      width: 100%;
+      text-decoration: none;
+      .l-text {
+        font-size: 20px;
+        @include breakpoint($pad) {
+          font-size: 30px;
+        }
+      }
+      .s-text {
+        font-size: 18px;
+        display: none;
+        @include breakpoint($pad) {
+          display: inline-block;
+        }
+      }
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+  background-color: #fff;
 }

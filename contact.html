@@ -28,7 +28,7 @@
     <meta property="og:image" content="http://weile-tech.com/img/home/slide2.jpg">
     <meta property="og:image" content="http://weile-tech.com/img/home/slide3.jpg">
   </head>
-  <body class="cbp-spmenu-push">
+  <body class="cbp-spmenu-push" data-spy="scroll" data-target="#navbar-list" data-offset="0">
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -81,45 +81,89 @@
 
     <div id="motorhomes-wrapper">
       <div id="contact-top" class="fill b-lazy">
+        <div id="hs6-camper">
+          <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/hs6/hs6-camper.png" alt="露營車">
+        </div>
+        
         <div id="ss6-camper">
           <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/ss6/ss6-camper.png" alt="露營車">
         </div>
+
       </div>
       <div class="wrap"></div>
       <div class="fake"></div>
-      <nav id="navbar-list" class="motorhomes-nav">
+      <nav id="navbar-list" class="motorhomes-nav contact">
         <ul class="nav">
           <li>
-            <a class="scroll-link" href="#looking">
-              <span class="l-text">外 觀</span>
+            <a class="scroll-link" href="#branch">
+              <span class="l-text">服務據點</span>
               <br>
-              <span class="s-text">Looking</span>
+              <span class="s-text">Branches</span>
             </a>
           </li>
           <li>
-            <a class="scroll-link" href="#safety">
-              <span class="l-text">安 全</span>
+            <a class="scroll-link" href="#exhibition">
+              <span class="l-text">展場資訊</span>
               <br>
-              <span class="s-text">Safety</span>
+              <span class="s-text">Exhibition Information</span>
             </a>
           </li>
           <li>
-            <a class="scroll-link" href="#equipment">
-              <span class="l-text">配 備</span>
+            <a class="scroll-link" href="#service">
+              <span class="l-text">客服中心</span>
               <br>
-              <span class="s-text">Equipment</span>
-            </a>
-          </li>
-          <li>
-            <a class="scroll-link" href="#question">
-              <span class="l-text">優 勢</span>
-              <br>
-              <span class="s-text">Advantage</span>
+              <span class="s-text">Customer Service</span>
             </a>
           </li>
         </ul>
       </nav>
     </div>
+
+    <div id="branch">
+      <div class="bg-container"></div>
+    </div>
+
+    <div id="exhibition">
+      <div class="bg-container"></div>
+      <div class="content-wrapper">
+        <div class="content">
+          <div class="img-logo">
+            <img src="img/contact/white-camper.png" alt="">
+          </div>
+          <div class="title-text-wrapper">
+            <h2>展場資訊</h2><br>
+            <h3>Exhibition Information</h3>
+          </div>
+          <div class="text-content">
+            <p>台北濱江旗艦展售中心，可實際看到唯樂露營車全品項的產品，並可體驗唯樂露營車置身於大自然綠野藍天中自然生活情境。</p>
+            <p>展售中心工作人員可隨時提供諮詢服務，各項車款除了基本款式外，另有多項客製化可供選擇的風格及配備，喜歡動手規劃每一個細節的你，唯樂露營車將帶給您一個全新的露營的體驗，MIT唯樂露營車將是您最好的選擇。</p>
+            <p>In our Taipei Binjiang Flagship Exhibition Center, clients can actually set eyes on the full series of Winner camper products, and also experience a living in natural environment with green fields and blue sky.</p>
+
+            <p>Exhibition Center’s work staffs will offer consultation services for you anywhere at any time, and except for basic styles, we also provide multiple customized and optional styles and outfits. We deeply believe that Winner camper will bring a fresh new camping experience for those who prefer hands-free mobility for every detail, and MIT Winner camper is going to be your best choice.</p>
+          </div>
+          
+        </div>
+        <div class="content-footer">
+          <div class="footer-logo">
+            <img src="img/contact/white-logo.png" alt="">
+          </div>
+          <div class="footer-content">
+            <h2>唯樂露營車展售中心  Winner Motorhomes Ltd., Co.</h2>
+            <p>1F., No.215, Binjiang St., Zhongshan Dist., Taipei City 104, Taiwan (R.O.C.)</p>
+            <p>TEL：+886 2 2518-1515  /  FAX：+886 2 2515-0525</p>
+            <p>Email：service@weile-tech.com</p>
+            <p>www.weile-tech.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="service">
+      <div class="bg-container"></div>
+    </div>
+
+
 
 
     <div id="footer-sitemap">
@@ -184,6 +228,12 @@
 
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/vendor/classie.js"></script>
+    <script src="js/vendor/cbpAnimatedHeader.js"></script>
+    <script src="js/lib/blazy.min.js"></script>
+
+
     <script>
       $(document).ready(function() {
         $('.carousel').carousel();
@@ -192,7 +242,16 @@
           $(this).toggleClass('is-active');
           $('body').toggleClass('cbp-spmenu-push-toleft');
           $('.cbp-spmenu-right').toggleClass('cbp-spmenu-open');
+        });
 
+        var bLazy = new Blazy();
+
+        $('a.scroll-link').on('click', function(event) {
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 90
+          }, 1500, 'easeInOutExpo');
+          event.preventDefault();
         });
       });
     </script>

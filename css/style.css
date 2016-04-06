@@ -2761,9 +2761,10 @@ button.md-close {
   margin-left: 0;
   margin-right: 0;
   padding-top: 100%;
-  background-image: url("../img/ss6/bg.jpg");
+  background-image: url("../img/contact/bg.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 @media (min-width: 767px) {
   #contact-top {
@@ -2774,6 +2775,257 @@ button.md-close {
   #contact-top {
     padding-top: 56.7%;
   }
+}
+#contact-top #ss6-camper {
+  position: absolute;
+  -moz-transform: translateX(-60px) translateY(0);
+  -ms-transform: translateX(-60px) translateY(0);
+  -webkit-transform: translateX(-60px) translateY(0);
+  transform: translateX(-60px) translateY(0);
+}
+#contact-top #hs6-camper {
+  position: absolute;
+  width: 90%;
+  top: 20%;
+  left: 10%;
+  -moz-transform: translateX(120px) translateY(-10px);
+  -ms-transform: translateX(120px) translateY(-10px);
+  -webkit-transform: translateX(120px) translateY(-10px);
+  transform: translateX(120px) translateY(-10px);
+}
+#contact-top #hs6-camper img {
+  width: 100%;
+}
+@media (min-width: 767px) {
+  #contact-top #hs6-camper {
+    width: 500px;
+    top: 25%;
+    left: 50%;
+    margin-left: -250px;
+  }
+}
+@media (min-width: 1024px) {
+  #contact-top #hs6-camper {
+    width: 500px;
+    top: 35%;
+    left: 50%;
+    margin-left: -250px;
+  }
+}
+@media (min-width: 1400px) {
+  #contact-top #hs6-camper {
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+  }
+}
+
+#service {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  height: 500px;
+  background-image: url("../img/contact/custom-service.jpg");
+  background-size: cover;
+  background-position: right bottom;
+}
+
+#exhibition {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+#exhibition .bg-container {
+  height: 300px;
+  background-image: url("../img/contact/info-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#exhibition .content-wrapper {
+  background-color: #7C0072;
+  padding: 30px 10% 80px 10%;
+}
+#exhibition .img-logo {
+  display: inline-block;
+  width: 300px;
+}
+#exhibition .img-logo img {
+  width: 100%;
+}
+#exhibition .title-text-wrapper {
+  display: inline-block;
+  padding-left: 30px;
+  vertical-align: bottom;
+}
+#exhibition .title-text-wrapper h2, #exhibition .title-text-wrapper h3 {
+  margin: 0;
+  color: #fff;
+}
+#exhibition .title-text-wrapper h2 {
+  font-size: 48px;
+}
+#exhibition .title-text-wrapper h3 {
+  font-size: 32px;
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+#exhibition .text-content {
+  color: #fff;
+  font-size: 18px;
+  padding: 50px 0;
+}
+#exhibition .text-content p {
+  margin: 0 0 30px;
+}
+#exhibition .content-footer {
+  overflow: hidden;
+  position: relative;
+}
+#exhibition .content-footer .footer-logo {
+  width: 100%;
+  padding: 0 50px;
+  display: inline-block;
+}
+@media (min-width: 767px) {
+  #exhibition .content-footer .footer-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    padding: 0;
+  }
+}
+#exhibition .content-footer .footer-logo img {
+  width: 100%;
+}
+#exhibition .content-footer .footer-content {
+  padding-left: 30px;
+  color: #fff;
+}
+#exhibition .content-footer .footer-content h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+@media (min-width: 767px) {
+  #exhibition .content-footer .footer-content {
+    margin-left: 200px;
+  }
+}
+
+nav.motorhomes-nav.contact {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+}
+nav.motorhomes-nav.contact.fixed {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+nav.motorhomes-nav.contact.fixed li {
+  display: none;
+}
+nav.motorhomes-nav.contact.fixed li > a {
+  padding: 10px 0;
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact.fixed li > a {
+    padding: 20px 0;
+  }
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact.fixed li {
+    display: block;
+  }
+}
+nav.motorhomes-nav.contact.fixed li.active {
+  display: block;
+}
+nav.motorhomes-nav.contact ul {
+  padding: 0;
+}
+nav.motorhomes-nav.contact li {
+  list-style: none;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+nav.motorhomes-nav.contact li:nth-child(n+2) {
+  display: none;
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact li {
+    width: 32.20339%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  nav.motorhomes-nav.contact li:nth-child(n+2) {
+    display: block;
+  }
+  nav.motorhomes-nav.contact li:before {
+    content: "";
+    width: 14px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -14px;
+    background-image: url("../img/ss6/hr.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact li:last-child {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+  }
+  nav.motorhomes-nav.contact li:last-child:before {
+    width: 0;
+  }
+}
+nav.motorhomes-nav.contact li > a {
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact li > a {
+    padding: 30px 0;
+  }
+}
+nav.motorhomes-nav.contact li > a .l-text {
+  font-size: 20px;
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact li > a .l-text {
+    font-size: 30px;
+  }
+}
+nav.motorhomes-nav.contact li > a .s-text {
+  font-size: 18px;
+  display: none;
+}
+@media (min-width: 767px) {
+  nav.motorhomes-nav.contact li > a .s-text {
+    display: inline-block;
+  }
+}
+nav.motorhomes-nav.contact li > a:hover {
+  background-color: #fff;
 }
 
 #footer-sitemap {
