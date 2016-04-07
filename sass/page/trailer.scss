@@ -1,29 +1,158 @@
-#equipment {
-  &.trailer {
-    margin-top: 50px;
-    @include breakpoint($pad) {
-      margin-top: 100px;
-    }
-    .bg-container {
-      position: relative;
-      background-image: url('../img/trailer/equipment/bg.jpg');
-      padding-top: 56.25%;
-      background-color: #ccc;
-      background-repeat: repeat-x;
-      background-size: cover;
-      background-position: bottom center;
-      .camper {
-        width: 50%;
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        @include translateX(-50%);
-        img {
-          width: 100%;
-        }
+#trailer-wrapper {
+  padding-top: 50px;
+  @include breakpoint($pad) {
+    padding-top: 100px;
+  }
+  .bg-container {
+    position: relative;
+    background-image: url('../img/trailer/equipment/bg.jpg');
+    padding-top: 56.25%;
+    background-color: #ccc;
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: bottom center;
+    .camper {
+      width: 50%;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      @include translateX(-50%);
+      img {
+        width: 100%;
       }
     }
   }
+}
+
+
+#safety {
+  &.trailer {
+    .safety-list {
+      margin-top: 10px;
+    }
+    .left-slide {
+      @include span(12);
+      padding: 10px;
+      @include breakpoint($pad) {
+        @include span(8);
+      }
+      @include breakpoint(960px) {
+        padding: 30px 0 20px 10%;
+      }
+
+    }
+    .right-side {
+      padding: 0 10px 10px 10px;
+      @include span(12);
+      @include breakpoint($pad) {
+        padding: 10px 20px 20px 0;
+        @include span(4 last);
+      }
+      @include breakpoint(960px) {
+        padding: 10px 10% 20px 0;
+      }
+    }
+  }
+
+  .left-slide {
+    @include span(12);
+      padding: 10px;
+    @include breakpoint($pad) {
+      @include span(8);
+    }
+    @include breakpoint(960px) {
+      padding: 20px 0 20px 10%;
+    }
+    img {
+      width: 100%;
+    }
+    .text-wrapper {
+      padding-top: 20px;
+      color: #60605F;
+      text-align: center;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  
+  .right-side {
+    overflow: hidden;
+    padding: 0 10px 10px 10px;
+    @include span(12);
+    @include breakpoint($pad) {
+      padding: 0 20px 20px 0;
+      @include span(4 last);
+    }
+    @include breakpoint(960px) {
+      padding: 0 10% 20px 0;
+    }
+  }
+
+  &.trailer {
+    .safety-list {
+      margin-top: 10px;
+      @include breakpoint($pad) {
+        margin-top: 20px;
+      }
+      img {
+        width: 100%;
+      }
+      &.span6 {
+        @include span(12);
+      }
+      &.span6.last {
+        @include span(12 last);
+      }
+      &.span3 {
+        @include span(5);
+      }
+      &.span3.last {
+        @include span(7 last);
+      }
+      position: relative;
+      .title {
+        display: inline-block;
+        padding: 12px;
+        background-color: rgba(0,0,0,1);
+        color: #f1f1f1;
+        font-size: 18px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+  
+  .option-lists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 10px;
+    @include breakpoint($pad) {
+      bottom: 50px;
+    }
+    width: 100%;
+    text-align: center;
+    li {
+      display: inline-block;
+      button {
+        border: 0;
+        background-color: transparent;
+        margin: 0 20px;
+        font-size: 18px;
+        @include breakpoint($pad) {
+          font-size: 20px;
+        }
+        color: #000;
+      }
+    }
+  }
+}
+
+#equipment {
   .menu {
     overflow: hidden;
     ul, li {

@@ -3028,15 +3028,15 @@ nav.motorhomes-nav.contact li > a:hover {
   background-color: #fff;
 }
 
-#equipment.trailer {
-  margin-top: 50px;
+#trailer-wrapper {
+  padding-top: 50px;
 }
 @media (min-width: 767px) {
-  #equipment.trailer {
-    margin-top: 100px;
+  #trailer-wrapper {
+    padding-top: 100px;
   }
 }
-#equipment.trailer .bg-container {
+#trailer-wrapper .bg-container {
   position: relative;
   background-image: url("../img/trailer/equipment/bg.jpg");
   padding-top: 56.25%;
@@ -3045,7 +3045,7 @@ nav.motorhomes-nav.contact li > a:hover {
   background-size: cover;
   background-position: bottom center;
 }
-#equipment.trailer .bg-container .camper {
+#trailer-wrapper .bg-container .camper {
   width: 50%;
   position: absolute;
   bottom: 5%;
@@ -3055,9 +3055,176 @@ nav.motorhomes-nav.contact li > a:hover {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-#equipment.trailer .bg-container .camper img {
+#trailer-wrapper .bg-container .camper img {
   width: 100%;
 }
+
+#safety.trailer .safety-list {
+  margin-top: 10px;
+}
+#safety.trailer .left-slide {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px;
+}
+@media (min-width: 767px) {
+  #safety.trailer .left-slide {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+@media (min-width: 960px) {
+  #safety.trailer .left-slide {
+    padding: 30px 0 20px 10%;
+  }
+}
+#safety.trailer .right-side {
+  padding: 0 10px 10px 10px;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 767px) {
+  #safety.trailer .right-side {
+    padding: 10px 20px 20px 0;
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 960px) {
+  #safety.trailer .right-side {
+    padding: 10px 10% 20px 0;
+  }
+}
+#safety .left-slide {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 10px;
+}
+@media (min-width: 767px) {
+  #safety .left-slide {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+@media (min-width: 960px) {
+  #safety .left-slide {
+    padding: 20px 0 20px 10%;
+  }
+}
+#safety .left-slide img {
+  width: 100%;
+}
+#safety .left-slide .text-wrapper {
+  padding-top: 20px;
+  color: #60605F;
+  text-align: center;
+}
+#safety .left-slide .text-wrapper p {
+  font-size: 18px;
+}
+#safety .right-side {
+  overflow: hidden;
+  padding: 0 10px 10px 10px;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 767px) {
+  #safety .right-side {
+    padding: 0 20px 20px 0;
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 960px) {
+  #safety .right-side {
+    padding: 0 10% 20px 0;
+  }
+}
+#safety.trailer .safety-list {
+  margin-top: 10px;
+  position: relative;
+}
+@media (min-width: 767px) {
+  #safety.trailer .safety-list {
+    margin-top: 20px;
+  }
+}
+#safety.trailer .safety-list img {
+  width: 100%;
+}
+#safety.trailer .safety-list.span6 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+#safety.trailer .safety-list.span6.last {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+}
+#safety.trailer .safety-list.span3 {
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+}
+#safety.trailer .safety-list.span3.last {
+  width: 57.62712%;
+  float: right;
+  margin-right: 0;
+}
+#safety.trailer .safety-list .title {
+  display: inline-block;
+  padding: 12px;
+  background-color: black;
+  color: #f1f1f1;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#safety .option-lists {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 767px) {
+  #safety .option-lists {
+    bottom: 50px;
+  }
+}
+#safety .option-lists li {
+  display: inline-block;
+}
+#safety .option-lists li button {
+  border: 0;
+  background-color: transparent;
+  margin: 0 20px;
+  font-size: 18px;
+  color: #000;
+}
+@media (min-width: 767px) {
+  #safety .option-lists li button {
+    font-size: 20px;
+  }
+}
+
 #equipment .menu {
   overflow: hidden;
 }
