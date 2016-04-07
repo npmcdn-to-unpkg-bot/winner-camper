@@ -200,8 +200,8 @@
     }
   }
   #equip2 {
-    .map-wrapper {
-      padding-top: 40%;
+    .map-wrapper.trailer {
+      padding-top: 50%;
       position: relative;
       button {
         border: 0;
@@ -362,6 +362,51 @@
           @include span(3 last);
         }
       }
+    }
+  }
+}
+
+.map-wrapper.trailer {
+  .spot {
+    &.ss6-spot1 {
+      position: absolute;
+      bottom: 40%;
+      left: 55%;
+    }
+    &.ss6-spot2 {
+      position: absolute;
+      top: 26%;
+      left: 60%;
+    }
+    &.ss6-spot3 {
+      position: absolute;
+      top: 50%;
+      left: 28%;
+    }
+    &.ss6-spot4 {
+      position: absolute;
+      top: 50%;
+      right: 15%;
+    }
+    &.hs6-spot1 {
+      position: absolute;
+      bottom: 40%;
+      left: 33%;
+    }
+    &.hs6-spot2 {
+      position: absolute;
+      bottom: 40%;
+      left: 20%;
+    }
+    &.hs6-spot3 {
+      position: absolute;
+      bottom: 40%;
+      left: 50%;
+    }
+    &.hs6-spot4 {
+      position: absolute;
+      bottom: 40%;
+      right: 20%;
     }
   }
 }

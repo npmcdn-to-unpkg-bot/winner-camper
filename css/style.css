@@ -3250,11 +3250,11 @@ nav.motorhomes-nav.contact li > a:hover {
 #equipment #equip1.trailer .text-wrapper h3 {
   font-size: 22px;
 }
-#equipment #equip2 .map-wrapper {
-  padding-top: 40%;
+#equipment #equip2 .map-wrapper.trailer {
+  padding-top: 50%;
   position: relative;
 }
-#equipment #equip2 .map-wrapper button {
+#equipment #equip2 .map-wrapper.trailer button {
   border: 0;
   background-color: transparent;
 }
@@ -3458,6 +3458,47 @@ nav.motorhomes-nav.contact li > a:hover {
     float: right;
     margin-right: 0;
   }
+}
+
+.map-wrapper.trailer .spot.ss6-spot1 {
+  position: absolute;
+  bottom: 40%;
+  left: 55%;
+}
+.map-wrapper.trailer .spot.ss6-spot2 {
+  position: absolute;
+  top: 26%;
+  left: 60%;
+}
+.map-wrapper.trailer .spot.ss6-spot3 {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+}
+.map-wrapper.trailer .spot.ss6-spot4 {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+}
+.map-wrapper.trailer .spot.hs6-spot1 {
+  position: absolute;
+  bottom: 40%;
+  left: 33%;
+}
+.map-wrapper.trailer .spot.hs6-spot2 {
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+}
+.map-wrapper.trailer .spot.hs6-spot3 {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+}
+.map-wrapper.trailer .spot.hs6-spot4 {
+  position: absolute;
+  bottom: 40%;
+  right: 20%;
 }
 
 #footer-sitemap {
