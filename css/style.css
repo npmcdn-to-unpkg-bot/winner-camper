@@ -3155,90 +3155,100 @@ nav.motorhomes-nav.contact li > a:hover {
   background-position: center;
   overflow: hidden;
 }
-#equipment #equip1 .upper-wrapper, #equipment #equip1 .lower-wrapper {
+#equipment #equip1.trailer {
+  padding: 30px 10px;
+}
+#equipment #equip1.trailer .left-wrapper {
+  padding: 0;
+}
+@media (min-width: 767px) {
+  #equipment #equip1.trailer .left-wrapper {
+    padding: 30px 0;
+  }
+}
+@media (min-width: 767px) {
+  #equipment #equip1.trailer {
+    padding: 30px 10% 30px 10%;
+  }
+}
+#equipment #equip1.trailer .left-col {
   width: 100%;
   float: left;
   margin-left: 0;
   margin-right: 0;
-  padding: 0 10px;
 }
 @media (min-width: 767px) {
-  #equipment #equip1 .upper-wrapper, #equipment #equip1 .lower-wrapper {
-    padding: 0 20px;
+  #equipment #equip1.trailer .left-col {
+    width: 57.62712%;
+    float: left;
+    margin-right: 1.69492%;
   }
 }
-@media (min-width: 1280px) {
-  #equipment #equip1 .upper-wrapper, #equipment #equip1 .lower-wrapper {
-    padding: 0 10%;
+#equipment #equip1.trailer .right-side {
+  padding: 20px 0;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (min-width: 767px) {
+  #equipment #equip1.trailer .right-side {
+    width: 40.67797%;
+    float: right;
+    margin-right: 0;
   }
 }
-#equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
-  padding: 10px 0 0 0;
+#equipment #equip1.trailer .right-side .equip-list {
+  margin-top: 10px;
+}
+#equipment #equip1.trailer .right-side .first-col {
   width: 49.15254%;
   float: left;
   margin-right: 1.69492%;
 }
-#equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
+#equipment #equip1.trailer .right-side .first-col .ratio-wrapper {
+  padding-top: 70%;
+  position: relative;
+  overflow: hidden;
+}
+#equipment #equip1.trailer .right-side .first-col .ratio-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#equipment #equip1.trailer .right-side .sec-col {
   width: 49.15254%;
   float: right;
   margin-right: 0;
 }
-@media (min-width: 767px) {
-  #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
-    padding: 20px 0 0 0;
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-  #equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-  #equipment #equip1 .upper-wrapper .equip-list:last-child, #equipment #equip1 .lower-wrapper .equip-list:last-child {
-    width: 23.72881%;
-    float: right;
-    margin-right: 0;
-  }
+#equipment #equip1.trailer .right-side .sec-col .equip-list:first-child .ratio-wrapper {
+  padding-top: 70%;
 }
-@media (min-width: 1280px) {
-  #equipment #equip1 .upper-wrapper .equip-list, #equipment #equip1 .lower-wrapper .equip-list {
-    padding: 20px 0 0 0;
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-  #equipment #equip1 .upper-wrapper .equip-list:nth-child(2n), #equipment #equip1 .lower-wrapper .equip-list:nth-child(2n) {
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-  }
-  #equipment #equip1 .upper-wrapper .equip-list:last-child, #equipment #equip1 .lower-wrapper .equip-list:last-child {
-    width: 23.72881%;
-    float: right;
-    margin-right: 0;
-  }
+#equipment #equip1.trailer .right-side .sec-col .equip-list:last-child .ratio-wrapper {
+  padding-top: 142%;
 }
-#equipment #equip1 .upper-wrapper .equip-list .ratio-wrapper, #equipment #equip1 .lower-wrapper .equip-list .ratio-wrapper {
-  width: 100%;
-  padding-top: 64%;
+#equipment #equip1.trailer .right-side .sec-col .ratio-wrapper {
   position: relative;
   overflow: hidden;
 }
-#equipment #equip1 .upper-wrapper .equip-list img, #equipment #equip1 .lower-wrapper .equip-list img {
+#equipment #equip1.trailer .right-side .sec-col .ratio-wrapper img {
   position: absolute;
-  width: 100%;
   top: 0;
   left: 0;
-}
-#equipment #equip1 .lower-wrapper {
-  padding-bottom: 20px;
-}
-#equipment #equip1 .lower-wrapper .equip-list .ratio-wrapper {
   width: 100%;
-  padding-top: 150%;
-  position: relative;
-  overflow: hidden;
+}
+#equipment #equip1.trailer .text-wrapper {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+#equipment #equip1.trailer .text-wrapper p {
+  font-size: 18px;
+}
+#equipment #equip1.trailer .text-wrapper h3 {
+  font-size: 22px;
 }
 #equipment #equip2 .map-wrapper {
   padding-top: 40%;

@@ -122,63 +122,79 @@
     overflow: hidden;
   }
   #equip1 {
-    .upper-wrapper, .lower-wrapper {
-      @include span(12);
-      padding: 0 10px;
-      @include breakpoint($pad) {
-        padding: 0 20px;
-      }
-      @include breakpoint(1280px) {
-        padding: 0 10%;
-      }
-      .equip-list {
-        padding: 10px 0 0 0;
-        @include span(6);
-        &:nth-child(2n) {
-          @include span(6 last);
-        }
+    &.trailer {
+      padding: 30px 10px;
+      .left-wrapper {
+        padding: 0;
         @include breakpoint($pad) {
-          padding: 20px 0 0 0;
-          @include span(3);
-          &:nth-child(2n) {
-            @include span(3);
-          }
-          &:last-child {
-            @include span(3 last);
-          }   
-        }
-        @include breakpoint(1280px) {
-          padding: 20px 0 0 0;
-          @include span(3);
-          &:nth-child(2n) {
-            @include span(3)
-          }
-          &:last-child {
-            @include span(3 last);
-          }    
-        }
-        .ratio-wrapper {
-          width: 100%;
-          padding-top: 64%;
-          position: relative;
-          overflow: hidden;
-        }
-        img {
-          position: absolute;
-          width: 100%;
-          top: 0;
-          left: 0;
+          padding: 30px 0;
         }
       }
-    }
-    .lower-wrapper {
-      padding-bottom: 20px;
-      .equip-list { 
-        .ratio-wrapper {
-          width: 100%;
-          padding-top: 150%;
-          position: relative;
-          overflow: hidden;
+      @include breakpoint($pad) {
+        padding: 30px 10% 30px 10%;
+      }
+      .left-col {
+        @include span(12);
+        @include breakpoint($pad) {
+          @include span(7);
+        }
+      }
+      .right-side {
+        padding: 20px 0;
+        @include span(12);
+        @include breakpoint($pad) {
+          @include span(5 last);
+        }
+        .equip-list {
+          margin-top: 10px;
+        }
+        .first-col {
+          @include span(6);
+          .ratio-wrapper {
+            padding-top: 70%;
+            position: relative;
+            overflow: hidden;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+            }
+          }
+        }
+        .sec-col {
+          @include span(6 last);
+          .equip-list {
+            &:first-child {
+              .ratio-wrapper {
+                padding-top: 70%;
+              }
+            }
+            &:last-child {
+              .ratio-wrapper {
+                padding-top: 142%;
+              }
+            }
+          }
+          .ratio-wrapper {
+            position: relative;
+            overflow: hidden;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+            } 
+          }
+        }
+      }
+      .text-wrapper {
+        @include span(12);
+        p {
+          font-size: 18px;
+        }
+        h3 {
+          font-size: 22px;
         }
       }
     }
