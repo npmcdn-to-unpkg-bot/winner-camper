@@ -170,6 +170,41 @@ a.know-more {
 
 .carousel-inner {
   .item {
+    .pos-r {
+      position: relative;
+      .left {
+        position: absolute;
+        width: 60%;
+        @include breakpoint($pad) {
+          width: 50%;
+        }
+        right: 50%;
+        top: 50%;
+        @include translateY(-50%);
+      }
+      .right {
+        position: absolute;
+        width: 60%;
+        @include breakpoint($pad) {
+          width: 50%;
+        }
+        left: 50%;
+        top: 50%;
+        @include translateY(-50%);
+      }
+      .tree {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        @include breakpoint($pad) {
+          margin-top: -100px;
+          width: 30%;
+        }
+        @include transform(translateX(-50%) translateY(-50%));
+      }
+    }
     &:nth-child(n+2) {
       .carousel-caption {
         top: 5%;

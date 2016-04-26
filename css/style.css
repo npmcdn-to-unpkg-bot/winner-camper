@@ -200,6 +200,56 @@ a.know-more {
   margin: 0 auto;
 }
 
+.carousel-inner .item .pos-r {
+  position: relative;
+}
+.carousel-inner .item .pos-r .left {
+  position: absolute;
+  width: 60%;
+  right: 50%;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 767px) {
+  .carousel-inner .item .pos-r .left {
+    width: 50%;
+  }
+}
+.carousel-inner .item .pos-r .right {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 767px) {
+  .carousel-inner .item .pos-r .right {
+    width: 50%;
+  }
+}
+.carousel-inner .item .pos-r .tree {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+@media (min-width: 767px) {
+  .carousel-inner .item .pos-r .tree {
+    margin-top: -100px;
+    width: 30%;
+  }
+}
 .carousel-inner .item:nth-child(n+2) .carousel-caption {
   top: 5%;
 }
